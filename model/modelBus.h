@@ -21,4 +21,15 @@ void mViewBus(){
     cout << endl;
 }
 
-int mSearch()
+int mSearchBus(string inpNamaBus){
+    int index = -1;
+    for(int i = 0; i < nTransPort; i++){
+        if(namaBus[i] == inpNamaBus){
+            index = i;
+            break;
+        }else{
+        cout << "Nama Bis yang anda cari tidak ada";
+        }
+    }
+    return index;
+}
