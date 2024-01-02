@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "model/modelBus.h"
-#include "view/viewUser.h"
+#include "view/admin/viewBus.h"
+#include "view/admin/viewUser.h"
 
 using namespace std;
 
@@ -41,8 +41,9 @@ void MenuAdmin()
         cout << "Menu Admin\n";
         cout << "1. Lihat User\n";
         cout << "2. Tambah angkutan\n";
-        cout << "3. Tambah Jadwal\n";
-        cout << "4. Update Jadwal\n";
+        cout << "3. Lihat Bus\n";
+        cout << "4. Tambah Jadwal\n";
+        cout << "5. Update Jadwal\n";
         cout << "9. Exit\n";
         cout << "Masukan Pilihan : ";
         cin >> pilih;
@@ -52,8 +53,10 @@ void MenuAdmin()
             vViewUser();
             break;
         case 2:
+            vAddBus();
             break;
         case 3:
+            vViewBus();
             break;
         case 4:
             break;
@@ -96,6 +99,6 @@ void LoginAuthentication(){
 
 int main (){
     static_value();
-    mViewBus();
+    LoginAuthentication();
     return 0;
 }

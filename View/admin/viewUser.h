@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../model/modelUser.h"
+#include "../../model/modelUser.h"
 
 using namespace std;
 
