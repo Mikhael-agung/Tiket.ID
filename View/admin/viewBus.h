@@ -7,13 +7,11 @@ using namespace std;
 void vAddBus (){
     string inpNamaBus,  inpJumlahKursi;
     cout << "Masukan Nama Bus : ";
-    getline (cin, inpNamaBus);
+    cin >> inpNamaBus;
     cin.ignore();
     cout << "Masukan Jumlah Kursi : ";
     getline(cin, inpJumlahKursi);
-    cin.ignore();
     mAddBus(inpNamaBus, inpJumlahKursi);
-    cout << endl;
 }
 
 void vViewBus(){
