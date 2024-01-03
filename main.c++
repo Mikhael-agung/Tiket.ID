@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
+#include <limits>
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
+#include "model/modelKereta.h"
 
 using namespace std;
 
@@ -15,6 +17,9 @@ void static_value(){
     mAddBus("Sugeng rahayu", "50");
     mAddBus("Patas", "50");
 
+    //* Testing Fitur Kereta dan Gerbong
+    mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
+    mAddTrain("Melati", "Eksekutif", "100");
 
 }
 
@@ -22,6 +27,7 @@ void confirm(int &pilih){
     char konfirmasi;
     cout << "kembali ke menu utama? (Y/N): ";
     cin >> konfirmasi;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     if (konfirmasi == 'y' || konfirmasi == 'Y')
     {
         pilih = 0;
@@ -42,8 +48,9 @@ void MenuAdmin()
         cout << "1. Lihat User\n";
         cout << "2. Tambah angkutan\n";
         cout << "3. Lihat Bus\n";
-        cout << "4. Tambah Jadwal\n";
-        cout << "5. Update Jadwal\n";
+        cout << "4. Cari Bus\n";
+        cout << "5. Cari user\n";
+        cout << "6. Update Jadwal\n";
         cout << "9. Exit\n";
         cout << "Masukan Pilihan : ";
         cin >> pilih;
@@ -59,9 +66,10 @@ void MenuAdmin()
             vViewBus();
             break;
         case 4:
-            
+            vSearchBus();
             break;
         case 5:
+            vSearchUser();
             break;  
         default:
             pilih = 9;
@@ -100,6 +108,7 @@ void LoginAuthentication(){
 
 int main (){
     static_value();
+    // mViewTrain();
     LoginAuthentication();
     return 0;
 }
