@@ -4,6 +4,7 @@
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
 #include "model/modelKereta.h"
+#include "model/modelJadwal.h"
 
 using namespace std;
 
@@ -21,13 +22,16 @@ void static_value(){
     mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
     mAddTrain("Melati", "Eksekutif", "100");
 
+    //*Testing jadwal
+    mAddjadwal("Patas", "18-4-2024", "18.00", "15.00", "20000");
+    mAddjadwal("Sugeng rahayu", "18-4-2024", "18.00", "15.00", "20000");
+
 }
 
 void confirm(int &pilih){
     char konfirmasi;
     cout << "kembali ke menu utama? (Y/N): ";
     cin >> konfirmasi;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     if (konfirmasi == 'y' || konfirmasi == 'Y')
     {
         pilih = 0;
