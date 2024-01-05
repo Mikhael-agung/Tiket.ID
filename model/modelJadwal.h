@@ -6,14 +6,20 @@
 
 using namespace std;
 
-void mAddjadwal(string inpBusName, string inpTanggal, string inpAwalKeberangkatan ,string inpTujuanKeberangkatan ,string inpJamKeberangkatan, string inpJamKedatangan, string inpHargaTiket ){
+void mAddjadwal(int inpidBus ,string inpNamaBusJadwal, string inpTanggal, string inpAwalKeberangkatan ,string inpTujuanKeberangkatan ,string inpJamKeberangkatan, string inpJamKedatangan, string inpHargaTiket ){
 
-    int indexNamaBus = mSearchBus(inpBusName);
-    // tanggalKeberangkatan[nJadwal] = inpTanggal;
-    // jamKeberangkatan[nJadwal] = inpJamKeberangkatan;
-    // jamKedatangan[nJadwal] = inpJamKedatangan;
-    // hargaTiket[nJadwal] = inpHargaTiket;
-    // nJadwal++;
+   
+    int indexNamaBus = mSearchBus(inpidBus, inpNamaBusJadwal);
+    cout << "Index: " << indexNamaBus << endl;
+    if (indexNamaBus != -1) {
+        tujuanKeberangkatan[nJadwal] = inpTujuanKeberangkatan;
+        awalKeberangkatan[nJadwal] = inpAwalKeberangkatan;
+        tanggalKeberangkatan[nJadwal] = inpTanggal;
+        jamKeberangkatan[nJadwal] = inpJamKeberangkatan;
+        jamKedatangan[nJadwal] = inpJamKedatangan;
+        hargaTiket[nJadwal] = inpHargaTiket;
+        nJadwal++;
+    }
 }
 
 // void mViewJadwal(){
