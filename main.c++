@@ -4,6 +4,7 @@
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
 #include "model/modelKereta.h"
+#include "model/modelJadwal.h"
 
 using namespace std;
 
@@ -21,13 +22,14 @@ void static_value(){
     mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
     mAddTrain("Melati", "Eksekutif", "100");
 
+    //*Testing jadwal
+   
 }
 
 void confirm(int &pilih){
     char konfirmasi;
     cout << "kembali ke menu utama? (Y/N): ";
     cin >> konfirmasi;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     if (konfirmasi == 'y' || konfirmasi == 'Y')
     {
         pilih = 0;
@@ -108,7 +110,27 @@ void LoginAuthentication(){
 
 int main (){
     static_value();
+    mAddjadwal("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
+    mAddjadwal("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
+
     // mViewTrain();
-    LoginAuthentication();
+    // LoginAuthentication();
     return 0;
 }
+// void mDeleteTransaksi(string kodeTransaksiinput){
+//     int index = mSearchTransaksi(kodeTransaksiinput);
+//     if(index != -1){
+//         for(int i = index; i < nTransaksi; i++){
+//             kodeTransaksi[i] = kodeTransaksi[i+1];
+//             namaPembeli[i] = namaPembeli[i+1];
+//             judulFilm[i] = judulFilm[i+1];
+//             namaStudio[i] = namaStudio[i+1];
+//             jamTayang[i] = jamTayang[i+1];
+//             tanggalTayang[i] = tanggalTayang[i+1];
+//             hargaTiket[i] = hargaTiket[i+1];
+//         }
+//         nTransaksi--;
+//     }else{
+//         cout << "Data tidak ditemukan" << endl;
+//     }
+// }
