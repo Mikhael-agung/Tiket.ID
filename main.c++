@@ -116,3 +116,20 @@ int main (){
     LoginAuthentication();
     return 0;
 }
+// void mDeleteTransaksi(string kodeTransaksiinput){
+//     int index = mSearchTransaksi(kodeTransaksiinput);
+//     if(index != -1){
+//         for(int i = index; i < nTransaksi; i++){
+//             kodeTransaksi[i] = kodeTransaksi[i+1];
+//             namaPembeli[i] = namaPembeli[i+1];
+//             judulFilm[i] = judulFilm[i+1];
+//             namaStudio[i] = namaStudio[i+1];
+//             jamTayang[i] = jamTayang[i+1];
+//             tanggalTayang[i] = tanggalTayang[i+1];
+//             hargaTiket[i] = hargaTiket[i+1];
+//         }
+//         nTransaksi--;
+//     }else{
+//         cout << "Data tidak ditemukan" << endl;
+//     }
+// }
