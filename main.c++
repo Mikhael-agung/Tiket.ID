@@ -4,11 +4,13 @@
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
 #include "model/modelKereta.h"
+#include "model/modelJadwal.h"
 
 using namespace std;
 
-void static_value(){
-    //! testing AddMember 
+void static_value()
+{
+    //! testing AddMember
     mAddUser("kurniawan", "0147258369", "0369258147", "kurniawan@gmail.com", "123456");
     mAddUser("gracie", "321654987", "789456123", "gracie@gmail.com", "0123456");
     // mAddUser("gracie", "321654987", "789456123", "gracie@gmail.com", "0123456");
@@ -21,13 +23,16 @@ void static_value(){
     mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
     mAddTrain("Melati", "Eksekutif", "100");
 
+    //*Testing jadwal
+    // mAddjadwal("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
+    // mAddjadwal("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
 }
 
-void confirm(int &pilih){
+void confirm(int &pilih)
+{
     char konfirmasi;
     cout << "kembali ke menu utama? (Y/N): ";
     cin >> konfirmasi;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     if (konfirmasi == 'y' || konfirmasi == 'Y')
     {
         pilih = 0;
@@ -38,7 +43,7 @@ void confirm(int &pilih){
         pilih = 9;
     }
 }
- 
+
 void MenuAdmin()
 {
     int pilih;
@@ -70,25 +75,31 @@ void MenuAdmin()
             break;
         case 5:
             vSearchUser();
-            break;  
+            break;
+        case 6:
+            vDeleteUser();
+            break;
         default:
             pilih = 9;
             break;
         }
 
-        if(pilih != 9){
+        if (pilih != 9)
+        {
             confirm(pilih);
         }
-        
+
     } while (pilih != 9);
     cout << "THX\n";
 }
 
-void MenuUser(){
+void MenuUser()
+{
     cout << "Fitur akan Segera Di Rilis 🙏🙏";
 }
 
-void LoginAuthentication(){
+void LoginAuthentication()
+{
     string email, password;
     cout << "Masukan Email/NIK anda :";
     cin >> email;
@@ -96,18 +107,24 @@ void LoginAuthentication(){
     cin >> password;
 
     int index = mLoginUser(email, password);
-    if(email == "admin" && password == "admin"){
+    if (email == "admin" && password == "admin")
+    {
         MenuAdmin();
-    }else if(index != -1){
+    }
+    else if (index != -1)
+    {
         MenuUser();
-    }else{
+    }
+    else
+    {
         cout << "Email/NIK atau Password yang anda masukan salah\n";
     }
 }
 
-
-int main (){
+int main()
+{
     static_value();
+
     // mViewTrain();
     LoginAuthentication();
     return 0;

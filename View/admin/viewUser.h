@@ -42,3 +42,29 @@ void vSearchUser(){
     cout << "================================================================================================================" << endl;
 }
 
+void vDeleteUser(){
+    string inpNamaUser, inpNikKtp;
+    cout << "Masukan Nama user : ";
+    cin >> inpNamaUser;
+    cout << "Masukan Nik KTP : ";
+    cin >> inpNikKtp;
+
+    int index = mDeleteUser(inpNamaUser, inpNikKtp);
+    if(index != -1){
+        cout << "Data user berhasil dihapus!!\n";
+    }else{
+        cout << "Data user tidak ditemukan \n";
+    }
+}
+
+
+// if(index != -1){
+        
+//         nMember--;
+//         return index;
+//     }else{
+//         cout << "Data tidak ditemukan" << endl;
+//         return -1;
+//     }
+
+   
