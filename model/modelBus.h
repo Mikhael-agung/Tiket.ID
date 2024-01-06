@@ -55,3 +55,16 @@ int mSearchBus(string inpIdBus, string inpNamaBus)
     }
     return index;
 }
+
+int mSearchJadwalBus(string inpNamaBus){
+    int index = -1;
+    for(int i = 0; i < nBus; i++){
+        if(namaBus[i] == inpNamaBus){
+            index = i;
+            break;
+        }else{
+            cout << "**Maaf Bus dan tujuan yang anda cari tidak ada";
+        }
+    }
+    return index;
+}
