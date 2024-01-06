@@ -6,11 +6,9 @@
 
 using namespace std;
 
-void mAddjadwal(string inpNamaBusJadwal, string inpTanggal, string inpAwalKeberangkatan ,string inpTujuanKeberangkatan ,string inpJamKeberangkatan, string inpJamKedatangan, string inpHargaTiket ){
-
-    int indexNamaBus = mSearchJadwalBus(inpNamaBusJadwal);
-    cout << "Index: " << indexNamaBus << endl;
-    if (indexNamaBus != -1) {
+void mAddjadwal(string inpNamaBus, string inpTanggal, string inpAwalKeberangkatan ,string inpTujuanKeberangkatan ,string inpJamKeberangkatan, string inpJamKedatangan, string inpHargaTiket ){
+    int index = mSearchJadwalBus(inpNamaBus);
+    if (index != -1) {
         tujuanKeberangkatan[nJadwal] = inpTujuanKeberangkatan;
         awalKeberangkatan[nJadwal] = inpAwalKeberangkatan;
         tanggalKeberangkatan[nJadwal] = inpTanggal;
@@ -18,6 +16,8 @@ void mAddjadwal(string inpNamaBusJadwal, string inpTanggal, string inpAwalKebera
         jamKedatangan[nJadwal] = inpJamKedatangan;
         hargaTiket[nJadwal] = inpHargaTiket;
         nJadwal++;
+    } else {
+        cout << "Bus dengan nama " << inpNamaBus << " tidak ditemukan.";
     }
 }
 
@@ -33,3 +33,18 @@ void mViewJadwal(){
     cout << "==============================================================||" << endl;
     cout << endl;
 }
+
+// int mSearchJadwalBus(string inpNamaBus, string inpAwalKeberangkatan, string inpTujuanKeberangkatan){
+//     int indexBus = mSearchJadwalBus(inpNamaBus);
+//     for(int i = 0; i < nBus; i++){
+//         if((namaBus[i] == inpNamaBus && awalKeberangkatan[i] == inpAwalKeberangkatan && tujuanKeberangkatan[i] == inpTujuanKeberangkatan) || (namaBus[i] == inpNamaBus && awalKeberangkatan[i] == inpAwalKeberangkatan && tujuanKeberangkatan[i] == "") || (namaBus[i] == "" && awalKeberangkatan[i] == inpAwalKeberangkatan && tujuanKeberangkatan[i] == inpTujuanKeberangkatan)){
+//             indexBus = i;
+//             break;
+//         }
+//     }
+    
+//     if(indexBus == -1){
+//             cout << "**Maaf Bus dan tujuan yang anda cari tidak ada";
+//         }
+//     return indexBus;
+// }

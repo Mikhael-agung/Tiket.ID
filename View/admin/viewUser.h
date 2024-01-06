@@ -58,13 +58,5 @@ void vDeleteUser(){
 }
 
 
-// if(index != -1){
-        
-//         nMember--;
-//         return index;
-//     }else{
-//         cout << "Data tidak ditemukan" << endl;
-//         return -1;
-//     }
 
    

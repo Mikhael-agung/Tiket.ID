@@ -62,9 +62,11 @@ int mSearchJadwalBus(string inpNamaBus){
         if(namaBus[i] == inpNamaBus){
             index = i;
             break;
-        }else{
-            cout << "**Maaf Bus dan tujuan yang anda cari tidak ada";
         }
+    }
+    
+    if(index == -1){
+        cout << "**Maaf Bus dan tujuan yang anda cari tidak ada";
     }
     return index;
 }
