@@ -1,22 +1,22 @@
-# Sistem Pembelian Tiket (Tiket.com Clone)
+# Ticket Purchase System (Clone of Tiket.com)
 
-Proyek ini adalah implementasi sederhana dari sistem pembelian tiket yang mirip dengan Tiket.com, dibuat menggunakan bahasa pemrograman C++.
+This project is a simple version of a ticket purchase system, similar to Tiket.com, created using the C++ programming language.
 
-## Deskripsi
+## Description
 
-Sistem ini memungkinkan pengguna untuk membeli tiket untuk berbagai jenis transportasi, seperti bus dan kereta. Pengguna dapat mencari jadwal berdasarkan nama bus atau kereta, tanggal keberangkatan, dan tujuan. Setelah menemukan jadwal yang diinginkan, pengguna dapat membeli tiket langsung melalui sistem.
+This system allows users to buy tickets for different types of transportation, like buses and trains. Users can search for schedules based on the name of the bus or train, departure date, and destination. Once they find the desired schedule, users can buy tickets directly through the system.
 
-## Fitur
+## Features
 
-- Manajemen User: Sistem ini mendukung penambahan user baru.
-- Manajemen Bus: Admin dapat menambahkan bus baru ke dalam sistem.
-- Manajemen Jadwal: Admin dapat menambahkan jadwal baru untuk bus yang ada.
-- Pencarian Jadwal: Pengguna dapat mencari jadwal berdasarkan nama bus, tanggal keberangkatan, dan tujuan.
-- Pembelian Tiket: Setelah menemukan jadwal yang diinginkan, pengguna dapat membeli tiket langsung melalui sistem.
+- User Management: The system supports adding new users.
+- Bus Management: Admins can add new buses to the system.
+- Schedule Management: Admins can add new schedules for existing buses.
+- Schedule Search: Users can search for schedules based on the bus name, departure date, and destination.
+- Ticket Purchase: After finding the desired schedule, users can buy tickets directly through the system.
 
-## Cara Menjalankan
+## How to Run
 
-Untuk menjalankan proyek ini, Anda perlu memiliki compiler C++ yang kompatibel. Anda dapat mengkompilasi dan menjalankan proyek ini dengan menggunakan perintah berikut:
+To run this project, you need to have a compatible C++ compiler. You can compile and run this project using the following commands:
 
 ```bash
 g++ main.cpp -o main
