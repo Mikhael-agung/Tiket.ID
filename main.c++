@@ -4,7 +4,7 @@
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
 // #include "model/modelKereta.h"
-#include "model/modelJadwal.h"
+#include "view/admin/viewJadwal.h"
 
 using namespace std;
 
@@ -51,11 +51,13 @@ void MenuAdmin()
     {
         cout << "Menu Admin\n";
         cout << "1. Lihat User\n";
-        cout << "2. Tambah angkutan\n";
-        cout << "3. Lihat Bus\n";
-        cout << "4. Cari Bus\n";
-        cout << "5. Cari user\n";
-        cout << "6. Update Jadwal\n";
+        cout << "2. Delete User\n";
+        cout << "3. Search user\n";
+        cout << "4. Tambah Bus\n";
+        cout << "5. Lihat Daftar Bus\n";
+        cout << "6. Search Bus\n";
+        cout << "7. Tambah jadwal Bus\n";
+        cout << "8. Lihat Jadwal Bus\n";
         cout << "9. Exit\n";
         cout << "Masukan Pilihan : ";
         cin >> pilih;
@@ -65,19 +67,25 @@ void MenuAdmin()
             vViewUser();
             break;
         case 2:
-            vAddBus();
+            vDeleteUser();
             break;
         case 3:
-            vViewBus();
-            break;
-        case 4:
-            vSearchBus();
-            break;
-        case 5:
             vSearchUser();
             break;
+        case 4:
+            vAddBus();
+            break;
+        case 5:
+            vViewBus();
+            break;
         case 6:
-            vDeleteUser();
+            vSearchBus();
+            break;
+        case 7: 
+            vAddJadwal();
+            break; 
+        case 8:
+            vViewJadwal();
             break;
         default:
             pilih = 9;
@@ -126,7 +134,7 @@ int main()
     static_value();
 
     // mViewTrain();
-    // LoginAuthentication();
-    mViewJadwal();
+    LoginAuthentication();
+    // mSearchJadwalBus();
     return 0;
 }
