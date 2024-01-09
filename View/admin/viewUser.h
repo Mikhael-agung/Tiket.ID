@@ -4,6 +4,22 @@
 
 using namespace std;
 
+void confirmUser(int &pilih)
+{
+    char konfirmasi;
+    cout << "kembali ke menu utama? (Y/N): ";
+    cin >> konfirmasi;
+    if (konfirmasi == 'y' || konfirmasi == 'Y')
+    {
+        pilih = 0;
+    }
+
+    if (konfirmasi == 'n' || konfirmasi == 'N')
+    {
+        pilih = 9;
+    }
+}
+
 void vAddUser(){
     string inpNamaUser, inpNikKtp, inpNoTelp, inpEmail, inpPassword;
     cout << "Masukan Nama anda :";
@@ -57,14 +73,47 @@ void vDeleteUser(){
     }
 }
 
+void vMenuUser (){
+    int pilih;
+    do
+    {
+    cout << "Menu User\n";
+    cout << "1. Tambah user\n";
+    cout << "2. Lihat user\n";
+    cout << "3. Cari user\n";
+    cout << "4. Delete User\n";
+    cout << "5. Kembali\n";
+    cout << "Masukan pilihan anda : ";
+    cin >> pilih;
+    switch (pilih)
+    {
+    case 1:
+        vAddUser();
+        break;
+    case 2: 
+        vViewUser();
+        break;
+    case 3: 
+        vSearchUser();
+        break;
+    case 4:
+        vDeleteUser();
+        break;
+    case 5:
+        pilih = 9;
+        break;
+    default:
+        pilih = 9;
+        break;
+    }
 
-// if(index != -1){
-        
-//         nMember--;
-//         return index;
-//     }else{
-//         cout << "Data tidak ditemukan" << endl;
-//         return -1;
-//     }
+    if (pilih != 9)
+        {
+            confirmUser(pilih);
+        }
+
+    } while (pilih != 9);
+    
+}
 
    

@@ -3,8 +3,8 @@
 #include <limits>
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
-#include "model/modelKereta.h"
-#include "model/modelJadwal.h"
+// #include "model/modelKereta.h"
+#include "view/admin/viewJadwal.h"
 
 using namespace std;
 
@@ -19,13 +19,13 @@ void static_value()
     mAddBus("Sugeng rahayu", "50");
     mAddBus("Patas", "50");
 
-    //* Testing Fitur Kereta dan Gerbong
-    mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
-    mAddTrain("Melati", "Eksekutif", "100");
+    // //* Testing Fitur Kereta dan Gerbong
+    // mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
+    // mAddTrain("Melati", "Eksekutif", "100");
 
     //*Testing jadwal
-    // mAddjadwal("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
-    // mAddjadwal("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
+    mAddjadwal("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
+    mAddjadwal("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
 }
 
 void confirm(int &pilih)
@@ -50,34 +50,34 @@ void MenuAdmin()
     do
     {
         cout << "Menu Admin\n";
-        cout << "1. Lihat User\n";
-        cout << "2. Tambah angkutan\n";
-        cout << "3. Lihat Bus\n";
-        cout << "4. Cari Bus\n";
-        cout << "5. Cari user\n";
-        cout << "6. Update Jadwal\n";
-        cout << "9. Exit\n";
+        cout << "1. Menu Edit User\n";
+        cout << "2. Menu Edit Bus\n";
+        cout << "5. Tambah jadwal Bus\n";
+        cout << "6. Lihat Jadwal Bus\n";
+        cout << "7. Exit\n";
         cout << "Masukan Pilihan : ";
         cin >> pilih;
         switch (pilih)
         {
         case 1:
-            vViewUser();
+            vMenuUser();
             break;
         case 2:
-            vAddBus();
+            vMenuBus();
             break;
         case 3:
-            vViewBus();
+            vAddJadwal();
             break;
         case 4:
-            vSearchBus();
+            vViewJadwal();
             break;
         case 5:
-            vSearchUser();
             break;
         case 6:
-            vDeleteUser();
+            break;
+        case 7: 
+            break; 
+        case 8:
             break;
         default:
             pilih = 9;
@@ -127,5 +127,6 @@ int main()
 
     // mViewTrain();
     LoginAuthentication();
+    // mSearchJadwalBus();
     return 0;
 }
