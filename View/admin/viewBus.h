@@ -6,6 +6,21 @@
 
 using namespace std;
 
+void confirmBus(int &pilih){
+    char konfirmasi;
+    cout << "kembali ke menu utama? (Y/N): ";
+    cin >> konfirmasi;
+    if (konfirmasi == 'y' || konfirmasi == 'Y')
+    {
+        pilih = 0;
+    }
+
+    if (konfirmasi == 'n' || konfirmasi == 'N')
+    {
+        pilih = 9;
+    }
+}
+ 
 void vAddBus() {
     string inpNamaBus, inpJumlahKursi, idBus;
     idBus = GenerateID();
@@ -39,4 +54,51 @@ void vSearchBus(){
         cout << setw(6) << index + 1 << setw(15)<< idBus[index] << setw(25) << namaBus[index] << setw(13) << jumlahKursi[index] << endl;
     }
     cout << "================================================================================================================" << endl;
+}
+
+void vDeleteBus(){
+    cout << "Fitur ini akan segera tersedia";
+}
+
+void vMenuBus (){
+    int pilih;
+    do
+    {
+        cout << "Menu Bus\n";
+        cout << "1. Tambah Bus\n";
+        cout << "2. Lihat daftar Bus\n";
+        cout << "3. Cari Bus\n";
+        cout << "4. Delete User (on going)\n";
+        cout << "5. Kembali\n";
+        cout << "Masukan pilihan anda : ";
+        cin >> pilih;
+        switch (pilih)
+        {
+        case 1:
+            vAddBus();
+            // if(pilih != 9){
+            // confirmBus(pilih);
+            // }
+            break;
+        case 2: 
+            vViewBus();
+            // if(pilih != 9){
+            // confirmBus(pilih);
+            // }
+            break;
+        case 3:
+            vSearchBus();
+            break;
+        case 4:
+            vDeleteBus();
+        break;
+        case 5: 
+            pilih = 9;
+            break;
+        default:
+            pilih = 9;
+            break;
+        }
+    } while (pilih != 9);
+    
 }
