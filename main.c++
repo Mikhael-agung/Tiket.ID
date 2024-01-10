@@ -24,8 +24,8 @@ void static_value()
     // mAddTrain("Melati", "Eksekutif", "100");
 
     //*Testing jadwal
-    mAddjadwal("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
-    mAddjadwal("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
+    mAddjadwalBus("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
+    mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
 }
 
 void confirm(int &pilih)
@@ -95,14 +95,11 @@ void MenuAdmin()
 
 void MenuUser()
 {
-    while (pilih != 0)
+    int pilih;
+    do
     {
-        cout << "Menu User " << endl;
-        cout << "1. Bus\n";
-        cout << "2. Kereta\n";
-        cout << "3. Pesawat\n";
-        cout << ""
-    }
+
+    } while (pilih != 0);
 }
 
 void LoginAuthentication()
