@@ -3,10 +3,12 @@
 #include <iomanip>
 #include "../database/databaseJadwal.h"
 // #include "../model/modelBus.h"
+// #include "../model/modelPesawat.h"
+// #include "../model/modelKereta.h"
 
 using namespace std;
 
-void mAddjadwal(string inpNamaBus, string inpTanggal, string inpAwalKeberangkatan ,string inpTujuanKeberangkatan ,string inpJamKeberangkatan, string inpJamKedatangan, string inpHargaTiket ){
+void mAddjadwalBus(string inpNamaBus, string inpTanggal, string inpAwalKeberangkatan ,string inpTujuanKeberangkatan ,string inpJamKeberangkatan, string inpJamKedatangan, string inpHargaTiket ){
     int index = mSearchJadwalBus(inpNamaBus);
     if (index != -1) {
         tujuanKeberangkatan[nJadwal] = inpTujuanKeberangkatan;
@@ -18,6 +20,36 @@ void mAddjadwal(string inpNamaBus, string inpTanggal, string inpAwalKeberangkata
         nJadwal++;
     } else {
         cout << "Bus dengan nama " << inpNamaBus << " tidak ditemukan.";
+    }
+}
+
+void mAddjadwalPesawat(string inpNamaPesawat, string inpTanggal, string inpAwalKeberangkatan ,string inpTujuanKeberangkatan ,string inpJamKeberangkatan, string inpJamKedatangan, string inpHargaTiket ){
+    int index = mSearchJadwalPesawat(inpNamaPesawat);
+    if (index != -1) {
+        tujuanKeberangkatan[nJadwal] = inpTujuanKeberangkatan;
+        awalKeberangkatan[nJadwal] = inpAwalKeberangkatan;
+        tanggalKeberangkatan[nJadwal] = inpTanggal;
+        jamKeberangkatan[nJadwal] = inpJamKeberangkatan;
+        jamKedatangan[nJadwal] = inpJamKedatangan;
+        hargaTiket[nJadwal] = inpHargaTiket;
+        nJadwal++;
+    } else {
+        cout << "Pesawat dengan nama " << inpNamaPesawat << " tidak ditemukan.";
+    }
+}
+
+void mAddjadwalKereta(string inpNamaKereta, string inpTanggal, string inpAwalKeberangkatan ,string inpTujuanKeberangkatan ,string inpJamKeberangkatan, string inpJamKedatangan, string inpHargaTiket ){
+    int index = mSearchJadwalKereta(inpNamaKereta);
+    if (index != -1) {
+        tujuanKeberangkatan[nJadwal] = inpTujuanKeberangkatan;
+        awalKeberangkatan[nJadwal] = inpAwalKeberangkatan;
+        tanggalKeberangkatan[nJadwal] = inpTanggal;
+        jamKeberangkatan[nJadwal] = inpJamKeberangkatan;
+        jamKedatangan[nJadwal] = inpJamKedatangan;
+        hargaTiket[nJadwal] = inpHargaTiket;
+        nJadwal++;
+    } else {
+        cout << "Kereta dengan nama " << inpNamaKereta << " tidak ditemukan.";
     }
 }
 
