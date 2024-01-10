@@ -89,7 +89,7 @@ void MenuAdmin()
             confirm(pilih);
         }
 
-    } while (pilih != 9);
+    } while (pilih != 7);
     cout << "THX\n";
 }
 
