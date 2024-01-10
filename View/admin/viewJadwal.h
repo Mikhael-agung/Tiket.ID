@@ -22,7 +22,7 @@ void vAddJadwal(){
     cin >> inpJamKedatangan;
     cout << "Masukan Harga Tiket : ";
     cin >> inpHargaTiker;
-    mAddjadwal(inpNamaBus, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker);
+    mAddjadwalBus(inpNamaBus, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker);
 
 }
 
