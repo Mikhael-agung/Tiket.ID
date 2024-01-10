@@ -124,6 +124,7 @@ void LoginAuthentication()
         if (jawab == 'y')
         {
             vAddUser();
+            LoginAuthentication();
         }
         else
         {
