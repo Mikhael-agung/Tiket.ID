@@ -95,7 +95,14 @@ void MenuAdmin()
 
 void MenuUser()
 {
-    cout << "Fitur akan Segera Di Rilis 🙏🙏";
+    while (pilih != 0)
+    {
+        cout << "Menu User " << endl;
+        cout << "1. Bus\n";
+        cout << "2. Kereta\n";
+        cout << "3. Pesawat\n";
+        cout << ""
+    }
 }
 
 void LoginAuthentication()
@@ -124,6 +131,7 @@ void LoginAuthentication()
         if (jawab == 'y')
         {
             vAddUser();
+            LoginAuthentication();
         }
         else
         {
