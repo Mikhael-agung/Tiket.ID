@@ -17,7 +17,7 @@ void confirmBus(int &pilih){
 
     if (konfirmasi == 'n' || konfirmasi == 'N')
     {
-        pilih = 9;
+        pilih = 7;
     }
 }
  
@@ -93,12 +93,12 @@ void vMenuBus (){
             vDeleteBus();
         break;
         case 5: 
-            pilih = 9;
+            pilih = 7;
             break;
         default:
-            pilih = 9;
+            pilih = 7;
             break;
         }
-    } while (pilih != 9);
+    } while (pilih != 7);
     
 }
