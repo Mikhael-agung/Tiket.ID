@@ -75,8 +75,8 @@ void MenuAdmin()
             break;
         case 6:
             break;
-        case 7: 
-            break; 
+        case 7:
+            break;
         case 8:
             break;
         default:
@@ -89,17 +89,25 @@ void MenuAdmin()
             confirm(pilih);
         }
 
-    } while (pilih != 9);
+    } while (pilih != 7);
     cout << "THX\n";
 }
 
 void MenuUser()
 {
-    cout << "Fitur akan Segera Di Rilis 🙏🙏";
+    while (pilih != 0)
+    {
+        cout << "Menu User " << endl;
+        cout << "1. Bus\n";
+        cout << "2. Kereta\n";
+        cout << "3. Pesawat\n";
+        cout << ""
+    }
 }
 
 void LoginAuthentication()
 {
+    char jawab;
     string email, password;
     cout << "Masukan Email/NIK anda :";
     cin >> email;
@@ -118,6 +126,17 @@ void LoginAuthentication()
     else
     {
         cout << "Email/NIK atau Password yang anda masukan salah\n";
+        cout << "Apakah anda ingin membuat akun ? (y/n):";
+        cin >> jawab;
+        if (jawab == 'y')
+        {
+            vAddUser();
+            LoginAuthentication();
+        }
+        else
+        {
+            cout << "TerimaKasih" << endl;
+        }
     }
 }
 
