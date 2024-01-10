@@ -95,14 +95,11 @@ void MenuAdmin()
 
 void MenuUser()
 {
-    while (pilih != 0)
+    int pilih;
+    do
     {
-        cout << "Menu User " << endl;
-        cout << "1. Bus\n";
-        cout << "2. Kereta\n";
-        cout << "3. Pesawat\n";
-        cout << ""
-    }
+
+    } while (pilih != 0);
 }
 
 void LoginAuthentication()
