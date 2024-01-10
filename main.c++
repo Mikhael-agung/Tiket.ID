@@ -75,8 +75,8 @@ void MenuAdmin()
             break;
         case 6:
             break;
-        case 7: 
-            break; 
+        case 7:
+            break;
         case 8:
             break;
         default:
@@ -100,6 +100,7 @@ void MenuUser()
 
 void LoginAuthentication()
 {
+    char jawab;
     string email, password;
     cout << "Masukan Email/NIK anda :";
     cin >> email;
@@ -118,6 +119,16 @@ void LoginAuthentication()
     else
     {
         cout << "Email/NIK atau Password yang anda masukan salah\n";
+        cout << "Apakah anda ingin membuat akun ? (y/n):";
+        cin >> jawab;
+        if (jawab == 'y')
+        {
+            vAddUser();
+        }
+        else
+        {
+            cout << "TerimaKasih" << endl;
+        }
     }
 }
 
