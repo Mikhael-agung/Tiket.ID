@@ -67,7 +67,7 @@ void MenuAdmin()
             vMenuBus();
             break;
         case 3:
-            vAddJadwal();
+            vAddJadwalBus();
             break;
         case 4:
             vViewJadwal();
