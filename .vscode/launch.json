@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Sjafrudin/Desktop/Reffy/Tugas/Tiket.ID-main",
-      "program": "c:/Users/Sjafrudin/Desktop/Reffy/Tugas/Tiket.ID-main/build/Debug/outDebug",
+      "cwd": "c:/Users/agung/Pictures/GitHub/Tiket.ID",
+      "program": "c:/Users/agung/Pictures/GitHub/Tiket.ID/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
