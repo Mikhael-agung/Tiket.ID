@@ -58,7 +58,7 @@ int mSearchPS(string inpIdPS, string inpNamaPS)
     return index;
 }
 
-int mSearchJadwalPS(string inpNamaPS)
+int mSearchJadwalPesawat(string inpNamaPS)
 {
     int index = -1;
     for (int i = 0; i < nPesawat; i++)
