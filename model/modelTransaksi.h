@@ -6,6 +6,6 @@
 using namespace std;
 
 void mTransaksiBus(string inpNamaBus, string inpStartKeberangkatan, string inpTujuanKeberangkatan){
-    int indexBus = mAddjadwalBus()
+    int indexBus = mAddjadwalBus(inpNamaBus)
 
 }
