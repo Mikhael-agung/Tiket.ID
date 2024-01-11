@@ -26,7 +26,7 @@ void mViewTrain()
     cout << endl;
 }
 
-int mSearchTrain(string inpNamaKereta, string inpNamaGerbong ){
+int mSearchJadwalKereta(string inpNamaKereta, string inpNamaGerbong ){
     
     int index = -1;
     for(int i = 0; i < nKereta; i++){
