@@ -85,39 +85,3 @@ void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTu
 //         cout << "Maaf, tiket yang Anda cari tidak ditemukan.\n";
 //     }
 // }
-
-void vTransaksiBus()
-{
-    string namaBis, startKeberangkatan, tujuanKeberangkatan;
-    cout << "Masukan nama bis yang anda cari : ";
-    cin >> namaBis;
-    cout << "Masukan stasiun pertama keberangkatan : ";
-    cin >> startKeberangkatan;
-    cout << "Masukan tujuan keberangkatan : ";
-    cin >> tujuanKeberangkatan;
-    mTransaksiBus(namaBis, startKeberangkatan, tujuanKeberangkatan);
-}
-
-// void vTransaksiPesawat()
-// {
-//     string namaPesawat, startKeberangkatan, tujuanKeberangkatan;
-//     cout << "Masukan nama pesawat yang anda cari : ";
-//     cin >> namaPesawat;
-//     cout << "Masukan stasiun pertama keberangkatan : ";
-//     cin >> startKeberangkatan;
-//     cout << "Masukan tujuan keberangkatan : ";
-//     cin >> tujuanKeberangkatan;
-//     // mTransaksiPesawat(namaPesawat, startKeberangkatan, tujuanKeberangkatan);
-// }
-
-// void vTransaksiKereta()
-// {
-//     string namaKereta, startKeberangkatan, tujuanKeberangkatan;
-//     cout << "Masukan nama kereta yang anda cari : ";
-//     cin >> namaKereta;
-//     cout << "Masukan stasiun pertama keberangkatan : ";
-//     cin >> startKeberangkatan;
-//     cout << "Masukan tujuan keberangkatan : ";
-//     cin >> tujuanKeberangkatan;
-//     // mTransaksiKereta(namaKereta, startKeberangkatan, tujuanKeberangkatan);
-// }

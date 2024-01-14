@@ -16,3 +16,27 @@ void vTransaksiBus()
     cin >> tujuanKeberangkatanInp;
     mTransaksiBus(namaBusInp, jamKeberangkatanInp, tujuanKeberangkatanInp);
 }
+
+// void vTransaksiPesawat()
+// {
+//     string namaPesawatInp, jamKeberangkatanInp, tujuanKeberangkatanInp;
+//     cout << "Masukkan Nama Pesawat :";
+//     cin >> namaPesawatInp;
+//     cout << "Masukkan Jam Keberangkatan :";
+//     cin >> jamKeberangkatanInp;
+//     cout << "Masukkan Tujuan Keberangakatan :";
+//     cin >> tujuanKeberangkatanInp;
+//     mTransaksiPesawat(namaPesawatInp, jamKeberangkatanInp, tujuanKeberangkatanInp);
+// }
+
+// void vTransaksiKereta()
+// {
+//     string namaKeretaInp, jamKeberangkatanInp, tujuanKeberangkatanInp;
+//     cout << "Masukkan Nama Kereta :";
+//     cin >> namaKeretaInp;
+//     cout << "Masukkan Jam Keberangkatan :";
+//     cin >> jamKeberangkatanInp;
+//     cout << "Masukkan Tujuan Keberangakatan :";
+//     cin >> tujuanKeberangkatanInp;
+//     mTransaksiKereta(namaKeretaInp, jamKeberangkatanInp, tujuanKeberangkatanInp);
+// }
