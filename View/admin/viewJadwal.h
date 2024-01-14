@@ -4,11 +4,12 @@
 
 using namespace std;
 
-void vAddJadwalBus(){
+void vAddJadwalBus()
+{
     string inpNamaBus, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker;
 
     cout << "Tambahkan Jadwal Bus\n";
-    cout << "Masukan Nama Bus : "; 
+    cout << "Masukan Nama Bus : ";
     cin >> inpNamaBus;
     cout << "Masukan Tanggal untuk jadwal :";
     cin >> inpTanggal;
@@ -29,7 +30,7 @@ void vAddJadwalBus(){
 //     string inpNamaPesawat, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker;
 
 //     cout << "Tambahkan Jadwal Pesawat\n";
-//     cout << "Masukan Nama Pesawat : "; 
+//     cout << "Masukan Nama Pesawat : ";
 //     cin >> inpNamaPesawat;
 //     cout << "Masukan Tanggal untuk jadwal :";
 //     cin >> inpTanggal;
@@ -50,7 +51,7 @@ void vAddJadwalBus(){
 //     string inpNamaKereta, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker;
 
 //     cout << "Tambahkan Jadwal Kereta\n";
-//     cout << "Masukan Nama Kereta : "; 
+//     cout << "Masukan Nama Kereta : ";
 //     cin >> inpNamaKereta;
 //     cout << "Masukan Tanggal untuk jadwal :";
 //     cin >> inpTanggal;
@@ -67,17 +68,19 @@ void vAddJadwalBus(){
 //     mAddjadwalKereta(inpNamaKereta, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker);
 // }
 
-void vViewJadwal(){
+void vViewJadwal()
+{
     mViewjadwalBus();
     // mViewjadwalPesawat();
     // mViewjadwalKereta();
 }
 
-void vSearchJadwalBus(){
+void vSearchJadwalBus()
+{
     string inpNamaBus;
     cout << "Masukan Nama Bus : ";
     cin >> inpNamaBus;
-    mSearchJadwalBus(inpNamaBus);
+    mSearchJadwalForBus(inpNamaBus);
 }
 
 // void vSearchJadwalPesawat(){

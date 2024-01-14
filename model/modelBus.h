@@ -56,7 +56,7 @@ int mSearchBus(string inpIdBus, string inpNamaBus)
     return index;
 }
 
-int mSearchJadwalBus(string inpNamaBus)
+int mSearchJadwalForBus(string inpNamaBus)
 {
     int index = -1;
     for (int i = 0; i < nBus; i++)
@@ -67,7 +67,6 @@ int mSearchJadwalBus(string inpNamaBus)
             break;
         }
     }
-
     if (index == -1)
     {
         cout << "**Maaf Bus dan tujuan yang anda cari tidak ada";
