@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#include "model/modelTransaksi.h"
+// #include "view/user/viewTransaksi.h"
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
 // #include "model/modelKereta.h"
@@ -26,6 +28,10 @@ void static_value()
     //*Testing jadwal
     mAddjadwalBus("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
     mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
+
+    //*Testing Transaksi
+
+    
 }
 
 void confirm(int &pilih)
@@ -66,7 +72,7 @@ void MenuAdmin()
             vMenuBus();
             break;
         case 3:
-            vAddJadwal();
+            vAddJadwalBus();
             break;
         case 4:
             vViewJadwal();
@@ -140,9 +146,10 @@ void LoginAuthentication()
 int main()
 {
     static_value();
-
+    mTransaksiBus("Patas", "Surabaya", "Jember");
     // mViewTrain();
-    LoginAuthentication();
+    // LoginAuthentication();
     // mSearchJadwalBus();
+    vSearchJadwalBus();
     return 0;
 }
