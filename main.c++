@@ -28,7 +28,7 @@ void static_value()
 
     //*Testing jadwal
     mAddjadwalBus("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
-    mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
+    mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "150000");
 
     //*Testing Transaksi
 }

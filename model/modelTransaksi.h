@@ -14,6 +14,7 @@ void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTu
         cout << "Nama BUS :" << namaBus[indexBus] << endl;
         cout << "Stasiun pertama :" << awalKeberangkatan[indexBus] << endl;
         cout << "Rute Tujuan Ke :" << tujuanKeberangkatan[indexBus] << endl;
+        cout << "Harga Tiket : " << hargaTiket[indexBus] << endl;
         // Menampilkan semua jadwal bus
         cout << "Apakah Anda setuju dengan hasil data yang ditemukan? (y/n): ";
         char konfirmasi;
