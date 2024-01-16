@@ -1,10 +1,13 @@
 #include <iostream>
 #include <string>
 #include <limits>
+// #include "view/user/viewTransaksi.h"
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
 // #include "model/modelKereta.h"
 #include "view/admin/viewJadwal.h"
+#include "view/user/viewTransaksi.h"
+// #include "model/modelTransaksi.h"
 
 using namespace std;
 
@@ -25,7 +28,9 @@ void static_value()
 
     //*Testing jadwal
     mAddjadwalBus("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
-    mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
+    mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "150000");
+
+    //*Testing Transaksi
 }
 
 void confirm(int &pilih)
@@ -52,7 +57,7 @@ void MenuAdmin()
         cout << "Menu Admin\n";
         cout << "1. Menu Edit User\n";
         cout << "2. Menu Edit Bus\n";
-        cout << "5. Tambah jadwal Bus\n";
+        cout << "3 Tambah jadwal Bus\n";
         cout << "6. Lihat Jadwal Bus\n";
         cout << "7. Exit\n";
         cout << "Masukan Pilihan : ";
@@ -72,6 +77,7 @@ void MenuAdmin()
             vViewJadwal();
             break;
         case 5:
+
             break;
         case 6:
             break;
@@ -84,11 +90,6 @@ void MenuAdmin()
             break;
         }
 
-        if (pilih != 9)
-        {
-            confirm(pilih);
-        }
-
     } while (pilih != 7);
     cout << "THX\n";
 }
@@ -98,7 +99,17 @@ void MenuUser()
     int pilih;
     do
     {
+        cout << "1. transaksi ";
+        cin >> pilih;
+        switch (pilih)
+        {
+        case 1:
+            vTransaksiBus();
+            break;
 
+        default:
+            break;
+        }
     } while (pilih != 0);
 }
 
@@ -140,9 +151,13 @@ void LoginAuthentication()
 int main()
 {
     static_value();
-
+    // mSearchJdwlBus("Patas", "Surabaya", "Jember");
+    mViewjadwalBus();
+    // mTransaksiBus("Patas", "Surabaya", "Jember");
     // mViewTrain();
-    LoginAuthentication();
+    // LoginAuthentication();
+    vTransaksiBus();
     // mSearchJadwalBus();
+    // vSearchJadwalBus();
     return 0;
 }
