@@ -112,7 +112,7 @@ int mSearchJdwlBus(string inpNamaBus, string inpAwalKeberangkatan, string inpTuj
 
     if (index == -1)
     {
-        cout << "**Maaf Bus dan tujuan yang anda cari tidak ada";
+        cout << "**Maaf Bus dan tujuan yang anda cari tidak ada\n";
     }
     return index;
 }

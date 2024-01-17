@@ -65,7 +65,7 @@ void MenuAdmin()
         switch (pilih)
         {
         case 1:
-            vMenuUser();
+            vMenuAdmin();
             break;
         case 2:
             vMenuBus();
@@ -78,12 +78,6 @@ void MenuAdmin()
             break;
         case 5:
 
-            break;
-        case 6:
-            break;
-        case 7:
-            break;
-        case 8:
             break;
         default:
             pilih = 9;
@@ -99,18 +93,22 @@ void MenuUser()
     int pilih;
     do
     {
-        cout << "1. transaksi ";
+        cout << "1. Tiket Bus " << endl;
+        cout << "2. Tiket Kereta" << endl;
+        cout << "3. Tiket Pesawat" << endl;
+        cout << "Silakan pilih angkutan";
         cin >> pilih;
         switch (pilih)
         {
         case 1:
-            vTransaksiBus();
+            vMenuBusUser();
             break;
 
         default:
             break;
         }
     } while (pilih != 0);
+    cout << "Terima Kasih";
 }
 
 void LoginAuthentication()
@@ -152,11 +150,11 @@ int main()
 {
     static_value();
     // mSearchJdwlBus("Patas", "Surabaya", "Jember");
-    mViewjadwalBus();
+    // mViewjadwalBus();
     // mTransaksiBus("Patas", "Surabaya", "Jember");
     // mViewTrain();
-    // LoginAuthentication();
-    vTransaksiBus();
+    LoginAuthentication();
+    // vTransaksiBus();
     // mSearchJadwalBus();
     // vSearchJadwalBus();
     return 0;
