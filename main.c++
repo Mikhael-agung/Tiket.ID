@@ -28,7 +28,7 @@ void static_value()
 
 
     //*Testing jadwal
-    mAddjadwalBus("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
+    mAddjadwalBus("Patas", "18-6-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
     mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "150000");
 
     //*Testing Transaksi
@@ -58,9 +58,7 @@ void MenuAdmin()
         cout << "Menu Admin\n";
         cout << "1. Menu Edit User\n";
         cout << "2. Menu Edit Bus\n";
-        cout << "3 Tambah jadwal Bus\n";
-        cout << "6. Lihat Jadwal Bus\n";
-        cout << "7. Exit\n";
+        cout << "3. Exit\n";
         cout << "Masukan Pilihan : ";
         cin >> pilih;
         switch (pilih)
@@ -78,7 +76,7 @@ void MenuAdmin()
             vViewJadwal();
             break;
         case 5:
-
+            pilih = 9;
             break;
         default:
             pilih = 9;

@@ -10,6 +10,7 @@ void metodePembayaran(){
     int pilih;
     do
     {
+        
         cout << "1. Virtual Account\n";
         cout << "2. Melalui ATM\n";
         cout << "3. Batal\n";
@@ -18,18 +19,22 @@ void metodePembayaran(){
         switch (pilih)
         {
         case 1 :
-            
+            // Virtual Account
             break;
 
         case 2: 
+            // ATM
+            break;
+        case 3: 
+            pilih = 0;
             break;
         
         default:
             cout << "Transaksi yang anda Di batalkan";
             break;
         }
-    } while (pilih != 3);
-    
+    } while (pilih != 0);
+    cout << "Terima Kasih";
 }
 
 void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTujuanKeberangkatan)
@@ -42,11 +47,7 @@ void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTu
         cout << "Nama BUS :" << namaBus[indexBus] << endl;
         cout << "Stasiun pertama :" << awalKeberangkatan[indexBus] << endl;
         cout << "Rute Tujuan Ke :" << tujuanKeberangkatan[indexBus] << endl;
-<<<<<<< HEAD
-        cout << "Dengan harga tiket : " << hargaTiket[indexBus] << endl;
-=======
         cout << "Harga Tiket : " << hargaTiket[indexBus] << endl;
->>>>>>> 3624d27bc257a2df0a33a14cbabac2d01224e285
         // Menampilkan semua jadwal bus
         cout << "Apakah Anda setuju dengan hasil data yang ditemukan? (y/n): ";
         char konfirmasi;
@@ -59,6 +60,7 @@ void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTu
             totalHarga = hargaTiketInt* jumlahTiket;
             cout << "Jadi total Harga tiket yang harus anda Bayar : " << totalHarga << endl;
             cout << "Pilih metode Pembayaran anda : ";
+            metodePembayaran();
         }
     }
     else
