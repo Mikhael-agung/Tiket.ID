@@ -21,6 +21,7 @@ void mAddUser(string inpNamaUser, string inpNikKtp, string inpNoTelp, string inp
     password[nMember] = inpPassword;
     email[nMember] = inpEmail;
     nikKtp[nMember] = inpNikKtp;
+    saldoPoint[nMember] = 0;
     nMember++;
 }
 
@@ -46,7 +47,7 @@ void mViewUser()
     cout << "================================================================================================================" << endl;
     for (int i = 0; i < nMember; i++)
     {
-        cout << setw(7) << i + 1 << setw(18) << userID[i] << namaMember[i] << setw(15) << nikKtp[i] << setw(15) << noTelp[i] << setw(25) << email[i] << setw(15) << password[i] << endl;
+        cout << setw(7) << i + 1 << setw(18) << userID[i] << namaMember[i] << setw(15) << nikKtp[i] << setw(15) << noTelp[i] << setw(25) << email[i] << setw(15) << password[i] << setw(15) << saldoPoint[i] << endl;
     }
     cout << "================================================================================================================" << endl;
 }
@@ -93,7 +94,7 @@ int mDeleteUser(string inpNamaUser, string inpNik)
     {
         if (namaMember[i] == inpNamaUser && nikKtp[i] == inpNik)
         {
-            for(int j = i; j < nMember - 1; j++)
+            for (int j = i; j < nMember - 1; j++)
             {
                 userID[j] = userID[j + 1];
                 namaMember[j] = namaMember[j + 1];
@@ -124,4 +125,3 @@ void mUpdatePassword(string inpNoTelp, string inpPass)
         cout << "Password Gagal untuk di rubah";
     }
 }
-
