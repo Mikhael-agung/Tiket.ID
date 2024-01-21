@@ -6,7 +6,9 @@
 #include "view/admin/viewUser.h"
 // #include "model/modelKereta.h"
 #include "view/admin/viewJadwal.h"
-#include "view/user/viewTransaksi.h"
+// #include "view/user/viewTransaksi.h"
+#include "view/user/viewTopUpPoint.h"
+// #include "model/modelTopUp.h"
 // #include "model/modelTransaksi.h"
 
 using namespace std;
@@ -25,7 +27,6 @@ void static_value()
     // //* Testing Fitur Kereta dan Gerbong
     // mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
     // mAddTrain("Melati", "Eksekutif", "100");
-
 
     //*Testing jadwal
     mAddjadwalBus("Sugeng rahayu", "18-6-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
@@ -86,7 +87,7 @@ void MenuAdmin()
     cout << "THX\n";
 }
 
-void MenuUser()
+void MenuUser(string inpNik)
 {
     int pilih;
     do
@@ -102,6 +103,10 @@ void MenuUser()
             vMenuBusUser();
             break;
 
+        case 2:
+            // mtopUpAkun();
+            vTopUpPoint(inpNik);
+            break;
         default:
             break;
         }
@@ -125,7 +130,7 @@ void LoginAuthentication()
     }
     else if (index != -1)
     {
-        MenuUser();
+        MenuUser(nikKtp[index]);
     }
     else
     {
