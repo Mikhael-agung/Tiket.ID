@@ -62,6 +62,8 @@ void vDeleteBus(){
 
 void vMenuBus (){
     int pilih;
+    void vAddJadwalBus();
+    void vViewJadwal();
     do
     {
         cout << "Menu Bus\n";
