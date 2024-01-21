@@ -53,12 +53,14 @@ void confirm(int &pilih)
 void MenuAdmin()
 {
     int pilih;
+    void LoginAuthentication();
     do
     {
         cout << "Menu Admin\n";
         cout << "1. Menu Edit User\n";
         cout << "2. Menu Edit Bus\n";
-        cout << "3. Exit\n";
+        cout << "3. Logout\n";
+        cout << "4. Exit\n";
         cout << "Masukan Pilihan : ";
         cin >> pilih;
         switch (pilih)
@@ -70,12 +72,9 @@ void MenuAdmin()
             vMenuBus();
             break;
         case 3:
-            vAddJadwalBus();
+            LoginAuthentication();
             break;
         case 4:
-            vViewJadwal();
-            break;
-        case 5:
             pilih = 9;
             break;
         default:
