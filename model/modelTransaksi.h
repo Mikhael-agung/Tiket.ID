@@ -7,6 +7,7 @@ using namespace std;
 
 void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTujuanKeberangkatan)
 {
+    
     int indexBus = mSearchJdwlBus(inpNamaBis, inpStartKeberangkatan, inpTujuanKeberangkatan);
     if (indexBus != -1)
     {

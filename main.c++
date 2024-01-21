@@ -7,6 +7,7 @@
 // #include "model/modelKereta.h"
 #include "view/admin/viewJadwal.h"
 #include "view/user/viewTransaksi.h"
+#include "model/modelTopUp.h"
 // #include "model/modelTransaksi.h"
 
 using namespace std;
@@ -107,6 +108,9 @@ void MenuUser()
             vTransaksiBus();
             break;
 
+        case 2:
+            mtopUpAkun();
+            break;
         default:
             break;
         }

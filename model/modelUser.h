@@ -63,6 +63,17 @@ int mSearchUser(string inpNoTelp)
     return -1;
 }
 
+int mSearchUserTU(string inpNoNIK)
+{
+    for (int i = 0; i < nMember; i++)
+    {
+        if (nikKtp[i] == inpNoNIK)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
 int mDeleteUser(string inpNamaUser, string inpNik)
 {
     for (int i = 0; i < nMember; i++)
