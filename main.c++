@@ -1,12 +1,10 @@
 #include <iostream>
 #include <string>
 #include <limits>
-// #include "view/user/viewTransaksi.h"
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
-// #include "model/modelKereta.h"
 #include "view/admin/viewJadwal.h"
-// #include "view/user/viewTransaksi.h"
+#include "view/user/viewTransaksi.h"
 #include "view/user/viewTopUpPoint.h"
 // #include "model/modelTopUp.h"
 // #include "model/modelTransaksi.h"
@@ -16,8 +14,8 @@ using namespace std;
 void static_value()
 {
     //! testing AddMember
-    mAddUser("kurniawan", "0147258369", "0369258147", "kurniawan@gmail.com", "123456");
-    mAddUser("gracie", "321654987", "789456123", "gracie@gmail.com", "0123456");
+    mAddUser("kurniawan", "123456789", "0369258147", "kurniawan@gmail.com", "123456");
+    mAddUser("gracie", "123456", "789456123", "gracie@gmail.com", "0123456");
     // mAddUser("gracie", "321654987", "789456123", "gracie@gmail.com", "0123456");
 
     //* Testing Kendaraan Bus Static_Value
@@ -67,7 +65,7 @@ void MenuAdmin()
         switch (pilih)
         {
         case 1:
-            vMenuAdmin();
+            vMenuAdminEditUser();
             break;
         case 2:
             vMenuBus();
@@ -107,7 +105,12 @@ void MenuUser(string inpNik)
             // mtopUpAkun();
             vTopUpPoint(inpNik);
             break;
+
+        case 3: 
+            pilih = 5;
+            break;
         default:
+            pilih = 5;
             break;
         }
     } while (pilih != 0);

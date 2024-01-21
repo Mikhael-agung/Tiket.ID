@@ -74,7 +74,7 @@ void vDeleteUser(){
 }
 
 
-void vMenuAdmin(){
+void vMenuAdminEditUser(){
     int pilih;
     do
     {
