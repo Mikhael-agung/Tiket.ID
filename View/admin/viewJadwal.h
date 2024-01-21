@@ -9,20 +9,21 @@ void vAddJadwalBus()
     string inpNamaBus, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker;
 
     cout << "Tambahkan Jadwal Bus\n";
+    cin.ignore();
     cout << "Masukan Nama Bus : ";
-    cin >> inpNamaBus;
+    getline(cin, inpNamaBus);
     cout << "Masukan Tanggal untuk jadwal :";
-    cin >> inpTanggal;
-    cout << "Masukan Awal Keberangkatan : ";
-    cin >> inpAwalKeberangkatan;
+    getline(cin, inpTanggal);
+    cout << "Masukan Terminal Keberangkatan : ";
+    getline(cin, inpAwalKeberangkatan);
     cout << "Masukan Tujuan Keberangkatan :";
-    cin >> inpTujuanKeberangkatan;
+    getline(cin, inpTujuanKeberangkatan);
     cout << "Masukan Jam Keberangkatan :";
-    cin >> inpJamKeberangkatan;
+    getline(cin, inpJamKeberangkatan);
     cout << "Masukan Jam Kedatangan : ";
-    cin >> inpJamKedatangan;
+    getline(cin, inpJamKedatangan);
     cout << "Masukan Harga Tiket : ";
-    cin >> inpHargaTiker;
+    getline(cin, inpHargaTiker);
     mAddjadwalBus(inpNamaBus, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker);
 }
 

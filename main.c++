@@ -6,8 +6,11 @@
 #include "view/admin/viewUser.h"
 // #include "model/modelKereta.h"
 #include "view/admin/viewJadwal.h"
-#include "view/user/viewTransaksi.h"
+// #include "view/user/viewTransaksi.h"
+#include "view/user/viewTopUpPoint.h"
+// #include "model/modelTopUp.h"
 // #include "model/modelTransaksi.h"
+//hahahhaa
 
 using namespace std;
 
@@ -25,7 +28,6 @@ void static_value()
     // //* Testing Fitur Kereta dan Gerbong
     // mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
     // mAddTrain("Melati", "Eksekutif", "100");
-
 
     //*Testing jadwal
     mAddjadwalBus("Patas", "18-6-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
@@ -53,12 +55,14 @@ void confirm(int &pilih)
 void MenuAdmin()
 {
     int pilih;
+    void LoginAuthentication();
     do
     {
         cout << "Menu Admin\n";
         cout << "1. Menu Edit User\n";
         cout << "2. Menu Edit Bus\n";
-        cout << "3. Exit\n";
+        cout << "3. Logout\n";
+        cout << "4. Exit\n";
         cout << "Masukan Pilihan : ";
         cin >> pilih;
         switch (pilih)
@@ -70,12 +74,9 @@ void MenuAdmin()
             vMenuBus();
             break;
         case 3:
-            vAddJadwalBus();
+            LoginAuthentication();
             break;
         case 4:
-            vViewJadwal();
-            break;
-        case 5:
             pilih = 9;
             break;
         default:
@@ -87,7 +88,7 @@ void MenuAdmin()
     cout << "THX\n";
 }
 
-void MenuUser()
+void MenuUser(string inpNik)
 {
     int pilih;
     do
@@ -103,6 +104,10 @@ void MenuUser()
             vMenuBusUser();
             break;
 
+        case 2:
+            // mtopUpAkun();
+            vTopUpPoint(inpNik);
+            break;
         default:
             break;
         }
@@ -126,7 +131,7 @@ void LoginAuthentication()
     }
     else if (index != -1)
     {
-        MenuUser();
+        MenuUser(nikKtp[index]);
     }
     else
     {

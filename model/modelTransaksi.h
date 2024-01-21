@@ -1,16 +1,48 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
-// #include "modelJadwal.h"
 
 using namespace std;
 
+void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTujuanKeberangkatan)
+{
+}
 
-void metodePembayaran(){
+// Fungsi pencarian user berdasarkan NIK atau nomor telepon
+int mSearchUserNik(string inpNikOrNoTelp)
+{
+    for (int i = 0; i < nMember; ++i)
+    {
+        if (nikKtp[i] == inpNikOrNoTelp || noTelp[i] == inpNikOrNoTelp)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// Fungsi pembayaran Virtual Account
+void mVirtualAccount(string inpNikKtp, int totalHarga[])
+{
+    cout << "Metode pembayaran Virtual Account\n";
+    int indexNIK = mSearchUserNik(inpNikKtp);
+    if (indexNIK != -1)
+    {
+        cout << "Total harga yang harus anda bayar: " << totalHarga[indexNIK] << endl;
+    }
+    else
+    {
+        cout << "Nik tidak ditemukan";
+    }
+}
+
+// Fungsi pembayaran
+void metodePembayaran(int totalHarga[])
+{
     int pilih;
+    string inpNikKtp;
     do
     {
-        
         cout << "1. Virtual Account\n";
         cout << "2. Melalui ATM\n";
         cout << "3. Batal\n";
@@ -18,28 +50,32 @@ void metodePembayaran(){
         cin >> pilih;
         switch (pilih)
         {
-        case 1 :
+        case 1:
             // Virtual Account
+            cout << "Masukkan NIK atau Nomor Telepon anda : ";
+            cin >> inpNikKtp;
+            mVirtualAccount(inpNikKtp, totalHarga);
+            cout << "Pembayaran berhasil";
             break;
-
-        case 2: 
+        case 2:
             // ATM
             break;
-        case 3: 
+        case 3:
             pilih = 0;
             break;
-        
         default:
-            cout << "Transaksi yang anda Di batalkan";
+            cout << "Transaksi yang anda batalkan";
             break;
         }
     } while (pilih != 0);
-    cout << "Terima Kasih";
+    // cout << "Terima Kasih";
 }
 
+// Fungsi transaksi bus
 void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTujuanKeberangkatan)
 {
-    int jumlahTiket, totalHarga, hargaTiketInt;
+    int jumlahTiket, hargaTiketInt;
+    string inpNikKtp;
     int indexBus = mSearchJdwlBus(inpNamaBis, inpStartKeberangkatan, inpTujuanKeberangkatan);
     if (indexBus != -1)
     {
@@ -55,12 +91,9 @@ void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTu
         if (konfirmasi == 'y' || konfirmasi == 'Y')
         {
             cout << "Berapa tiket yang ingin Anda beli? ";
+            int jumlahTiket;
             cin >> jumlahTiket;
-            hargaTiketInt = stoi(hargaTiket[indexBus]);
-            totalHarga = hargaTiketInt* jumlahTiket;
-            cout << "Jadi total Harga tiket yang harus anda Bayar : " << totalHarga << endl;
-            cout << "Pilih metode Pembayaran anda : ";
-            metodePembayaran();
+            // Proses pembelian tiket
         }
     }
     else
