@@ -81,8 +81,8 @@ void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTu
             inpNikKtp = ""; 
 
             while (true) {
-                cout << "Masukkan NIK atau Nomor Telepon Anda untuk pembayaran: ";
-                cin >> inpNikKtp;
+                // cout << "Masukkan NIK atau Nomor Telepon Anda untuk pembayaran: ";
+                // cin >> inpNikKtp;
 
                 int indexUser = mSearchUserNik(inpNikKtp);
                 if (indexUser != -1) {
