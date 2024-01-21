@@ -26,8 +26,9 @@ void static_value()
     // mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
     // mAddTrain("Melati", "Eksekutif", "100");
 
+
     //*Testing jadwal
-    mAddjadwalBus("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
+    mAddjadwalBus("Patas", "18-6-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
     mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "150000");
 
     //*Testing Transaksi
@@ -52,38 +53,29 @@ void confirm(int &pilih)
 void MenuAdmin()
 {
     int pilih;
+    void LoginAuthentication();
     do
     {
         cout << "Menu Admin\n";
         cout << "1. Menu Edit User\n";
         cout << "2. Menu Edit Bus\n";
-        cout << "3 Tambah jadwal Bus\n";
-        cout << "6. Lihat Jadwal Bus\n";
-        cout << "7. Exit\n";
+        cout << "3. Logout\n";
+        cout << "4. Exit\n";
         cout << "Masukan Pilihan : ";
         cin >> pilih;
         switch (pilih)
         {
         case 1:
-            vMenuUser();
+            vMenuAdmin();
             break;
         case 2:
             vMenuBus();
             break;
         case 3:
-            vAddJadwalBus();
+            LoginAuthentication();
             break;
         case 4:
-            vViewJadwal();
-            break;
-        case 5:
-
-            break;
-        case 6:
-            break;
-        case 7:
-            break;
-        case 8:
+            pilih = 9;
             break;
         default:
             pilih = 9;
@@ -99,18 +91,22 @@ void MenuUser()
     int pilih;
     do
     {
-        cout << "1. transaksi ";
+        cout << "1. Tiket Bus " << endl;
+        cout << "2. Tiket Kereta" << endl;
+        cout << "3. Tiket Pesawat" << endl;
+        cout << "Silakan pilih angkutan";
         cin >> pilih;
         switch (pilih)
         {
         case 1:
-            vTransaksiBus();
+            vMenuBusUser();
             break;
 
         default:
             break;
         }
     } while (pilih != 0);
+    cout << "Terima Kasih";
 }
 
 void LoginAuthentication()
@@ -152,11 +148,11 @@ int main()
 {
     static_value();
     // mSearchJdwlBus("Patas", "Surabaya", "Jember");
-    mViewjadwalBus();
+    // mViewjadwalBus();
     // mTransaksiBus("Patas", "Surabaya", "Jember");
     // mViewTrain();
-    // LoginAuthentication();
-    vTransaksiBus();
+    LoginAuthentication();
+    // vTransaksiBus();
     // mSearchJadwalBus();
     // vSearchJadwalBus();
     return 0;

@@ -7,5 +7,6 @@ string jamKeberangkatan[100];
 string jamKedatangan[100];
 string tujuanKeberangkatan[100];
 string awalKeberangkatan[100];
+int totalHarga[100];
 
 int nJadwal = 0;

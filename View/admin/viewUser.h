@@ -73,7 +73,8 @@ void vDeleteUser(){
     }
 }
 
-void vMenuUser (){
+
+void vMenuAdmin(){
     int pilih;
     do
     {
@@ -115,5 +116,41 @@ void vMenuUser (){
     } while (pilih != 9);
     
 }
+   
+void vMenuBusUser(){
+    int pilih;
+    void mViewjadwalBus();
+    void vTransaksiBus();
+    do
+    {
+    cout << "Menu User\n";
+    cout << "1. Lihat Jadwal\n";
+    cout << "2. Cari Tiket\n";
+    cout << "3. Kembali\n";
+    cout << "Masukan pilihan anda : ";
+    cin >> pilih;
+    switch (pilih)
+    {
+    case 1:
+        mViewjadwalBus();
+        break;
+    case 2: 
+        vTransaksiBus();
+        break;
+    case 3:
+        pilih = 9;
+        break;
+    default:
+        pilih = 9;
+        break;
+    }
 
+    if (pilih != 9)
+        {
+            confirmUser(pilih);
+        }
+
+    } while (pilih != 9);
+    
+}
    

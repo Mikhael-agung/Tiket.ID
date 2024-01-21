@@ -9,11 +9,12 @@ void vTransaksiBus()
 {
     string namaBusInp, jamKeberangkatanInp, tujuanKeberangkatanInp;
     cout << "Masukkan Nama BUS :";
-    cin >> namaBusInp;
-    cout << "Masukkan Jam Keberangkatan :";
-    cin >> jamKeberangkatanInp;
+    cin.ignore();
+    getline(cin, namaBusInp);
+    cout << "Masukkan Awal Keberangkatan :";
+    getline(cin, jamKeberangkatanInp);
     cout << "Masukkan Tujuan Keberangakatan :";
-    cin >> tujuanKeberangkatanInp;
+    getline(cin, tujuanKeberangkatanInp);
     mTransaksiBus(namaBusInp, jamKeberangkatanInp, tujuanKeberangkatanInp);
 }
 
