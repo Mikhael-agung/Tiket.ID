@@ -1,13 +1,69 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
-// #include "modelJadwal.h"
 
 using namespace std;
 
 void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTujuanKeberangkatan)
 {
     
+// Fungsi pencarian user berdasarkan NIK atau nomor telepon
+int mSearchUserNik(string inpNikOrNoTelp) {
+    for (int i = 0; i < nMember; ++i) {
+        if (nikKtp[i] == inpNikOrNoTelp || noTelp[i] == inpNikOrNoTelp) {
+            return i; 
+        }
+    }
+    return -1; 
+}
+
+// Fungsi pembayaran Virtual Account
+void mVirtualAccount(string inpNikKtp, int totalHarga[]) {
+    cout << "Metode pembayaran Virtual Account\n";
+    int indexNIK = mSearchUserNik(inpNikKtp);
+    if (indexNIK != -1) {
+        cout << "Total harga yang harus anda bayar: " << totalHarga[indexNIK] << endl;
+    } else {
+        cout << "Nik tidak ditemukan";
+    }
+}
+
+// Fungsi pembayaran
+void metodePembayaran(int totalHarga[]) {
+    int pilih;
+    string inpNikKtp;
+    do {
+        cout << "1. Virtual Account\n";
+        cout << "2. Melalui ATM\n";
+        cout << "3. Batal\n";
+        cout << "Silakan Pilih metode pembayaran : ";
+        cin >> pilih;
+        switch (pilih) {
+            case 1:
+                // Virtual Account
+                cout << "Masukkan NIK atau Nomor Telepon anda : ";
+                cin >> inpNikKtp;
+                mVirtualAccount(inpNikKtp, totalHarga);
+                cout << "Pembayaran berhasil";
+                break;
+            case 2:
+                // ATM
+                break;
+            case 3:
+                pilih = 0;
+                break;
+            default:
+                cout << "Transaksi yang anda batalkan";
+                break;
+        }
+    } while (pilih != 0);
+    cout << "Terima Kasih";
+}
+
+// Fungsi transaksi bus
+void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTujuanKeberangkatan) {
+    int jumlahTiket, hargaTiketInt;
+    string inpNikKtp;
     int indexBus = mSearchJdwlBus(inpNamaBis, inpStartKeberangkatan, inpTujuanKeberangkatan);
     if (indexBus != -1)
     {

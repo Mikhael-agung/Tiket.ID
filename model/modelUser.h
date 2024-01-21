@@ -51,6 +51,8 @@ void mViewUser()
     cout << "================================================================================================================" << endl;
 }
 
+// Search User By No.Telpon
+
 int mSearchUser(string inpNoTelp)
 {
     for (int i = 0; i < nMember; i++)
@@ -62,6 +64,17 @@ int mSearchUser(string inpNoTelp)
     }
     return -1;
 }
+
+// // Search User By NIK KTP
+
+// int mSearchUserNik(string inpNikKtp){
+//     for(int i = 0; i << nMember; i++){
+//         if(nikKtp[i] == inpNikKtp){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
 
 int mSearchUserTU(string inpNoNIK)
 {
