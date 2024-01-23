@@ -114,131 +114,9 @@ void vMenuAdminEditUser(){
 
     } while (pilih != 9);
 }
-void vMenuAdmin()
-{
-    int pilih;
-    do
-    {
-        cout << "Menu User\n";
-        cout << "1. Tambah user\n";
-        cout << "2. Lihat user\n";
-        cout << "3. Cari user\n";
-        cout << "4. Delete User\n";
-        cout << "5. Kembali\n";
-        cout << "Masukan pilihan anda : ";
-        cin >> pilih;
-        switch (pilih)
-        {
-        case 1:
-            vAddUser();
-            break;
-        case 2:
-            vViewUser();
-            break;
-        case 3:
-            vSearchUser();
-            break;
-        case 4:
-            vDeleteUser();
-            break;
-        case 5:
-            pilih = 9;
-            break;
-        default:
-            pilih = 9;
-            break;
-        }
-
-        if (pilih != 9)
-        {
-            confirmUser(pilih);
-        }
-
-    } while (pilih != 9);
-}
-void vMenuAdmin()
-{
-    int pilih;
-    do
-    {
-    cout << "Menu User\n";
-    cout << "1. Tambah user\n";
-    cout << "2. Lihat user\n";
-    cout << "3. Cari user\n";
-    cout << "4. Delete User\n";
-    cout << "5. Kembali\n";
-    cout << "Masukan pilihan anda : ";
-    cin >> pilih;
-
-    switch (pilih)
-    {
-    case 1:
-        vAddUser();
-        break;
-    case 2: 
-        vViewUser();
-        break;
-    case 3: 
-        vSearchUser();
-        break;
-    case 4:
-        vDeleteUser();
-        break;
-    case 5:
-        pilih = 9;
-        break;
-    default:
-        pilih = 9;
-        break;
-    }
-
-    if (pilih != 9)
-        {
-            confirmUser(pilih);
-        }
-
-    } while (pilih != 9);
-}
-   
-void vMenuBusUser(){
-    int pilih;
-    void mViewjadwalBus();
-    void vTransaksiBus();
-    do
-    {
-    cout << "Menu User\n";
-    cout << "1. Lihat Jadwal\n";
-    cout << "2. Cari Tiket\n";
-    cout << "3. Kembali\n";
-    cout << "Masukan pilihan anda : ";
-    cin >> pilih;
-    switch (pilih)
-    {
-    case 1:
-        mViewjadwalBus();
-        break;
-    case 2: 
-        vTransaksiBus();
-        break;
-    case 3:
-        pilih = 9;
-        break;
-    default:
-        pilih = 9;
-        break;
-    }
-
-    if (pilih != 9)
-        {
-            confirmUser(pilih);
-        }
-
-    } while (pilih != 9);
-    
-}
 
 void vMenuAdmin(){
- int pilih;
+    int pilih;
     do
     {
         cout << "Menu User\n";
@@ -279,6 +157,7 @@ void vMenuAdmin(){
     } while (pilih != 9);
 }
 
+   
 void vMenuBusUser()
 {
     int pilih;
