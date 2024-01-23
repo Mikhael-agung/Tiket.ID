@@ -4,18 +4,6 @@
 
 using namespace std;
 
-int mSearchUserNik(string inpNikOrNoTelp)
-{
-    for (int i = 0; i < nMember; ++i)
-    {
-        if (nikKtp[i] == inpNikOrNoTelp || noTelp[i] == inpNikOrNoTelp)
-        {
-            return i;
-        }
-    }
-    return -1;
-}
-
 
 // Fungsi pembayaran Virtual Account
 void mVirtualAccount(int totalHarga[])
