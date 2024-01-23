@@ -1,15 +1,14 @@
 #include <iostream>
 #include <string>
 #include <limits>
-// #include "view/user/viewTransaksi.h"
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
-// #include "model/modelKereta.h"
 #include "view/admin/viewJadwal.h"
 #include "view/user/viewTransaksi.h"
 #include "view/user/viewTopUpPoint.h"
 // #include "model/modelTopUp.h"
 // #include "model/modelTransaksi.h"
+//hahahhaa
 
 using namespace std;
 
@@ -29,8 +28,8 @@ void static_value()
     // mAddTrain("Melati", "Eksekutif", "100");
 
     //*Testing jadwal
-    mAddjadwalBus("Patas", "18-6-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
-    mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "150000");
+    mAddjadwalBus("Sugeng rahayu", "18-6-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
+    mAddjadwalBus("Patas", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "150000");
 
     //*Testing Transaksi
 }
@@ -67,7 +66,7 @@ void MenuAdmin()
         switch (pilih)
         {
         case 1:
-            vMenuAdmin();
+            vMenuAdminEditUser();
             break;
         case 2:
             vMenuBus();
