@@ -42,12 +42,12 @@ void mViewUser()
     cout << "Data Para Member\n";
     cout << "Jumlah member : " << nMember << endl;
     cout << "================================================================================================================" << endl;
-    cout << setw(10) << "No. urut" << setw(13) << "No .ID"
-         << "Nama" << setw(17) << "No Nik Ktp" << setw(14) << "No. Telp" << setw(20) << "Email" << setw(20) << "Password" << endl;
+    cout << setw(10) << "No. urut" << setw(13) << "No .ID" << setw(10)
+         << "Nama" << setw(17) << "No Nik Ktp" << setw(14) << "No. Telp" << setw(20) << "Email" << setw(20) << "Password" << setw(15) << "Point" << endl;
     cout << "================================================================================================================" << endl;
     for (int i = 0; i < nMember; i++)
     {
-        cout << setw(7) << i + 1 << setw(18) << userID[i] << namaMember[i] << setw(15) << nikKtp[i] << setw(15) << noTelp[i] << setw(25) << email[i] << setw(15) << password[i] << setw(15) << saldoPoint[i] << endl;
+        cout << setw(7) << i + 1 << setw(15) << userID[i] << setw(12) << namaMember[i] << setw(15) << nikKtp[i] << setw(15) << noTelp[i] << setw(25) << email[i] << setw(15) << password[i] << setw(15) << saldoPoint[i] << endl;
     }
     cout << "================================================================================================================" << endl;
 }

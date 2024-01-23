@@ -6,8 +6,7 @@ using namespace std;
 
 void vAddJadwalBus()
 {
-    string inpNamaBus, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker;
-
+    string inpNamaBus, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiket;
     cout << "Tambahkan Jadwal Bus\n";
     cin.ignore();
     cout << "Masukan Nama Bus : ";
@@ -23,8 +22,8 @@ void vAddJadwalBus()
     cout << "Masukan Jam Kedatangan : ";
     getline(cin, inpJamKedatangan);
     cout << "Masukan Harga Tiket : ";
-    getline(cin, inpHargaTiker);
-    mAddjadwalBus(inpNamaBus, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiker);
+    cin >> inpHargaTiket;
+    mAddjadwalBus(inpNamaBus, inpTanggal, inpAwalKeberangkatan, inpTujuanKeberangkatan, inpJamKeberangkatan, inpJamKedatangan, inpHargaTiket);
 }
 
 // void vAddJadwalPesawat(){
