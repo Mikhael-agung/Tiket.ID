@@ -120,6 +120,7 @@ void MenuUser(string inpNik)
             {
             case 1:
                 vInfoAkun(inpNik);
+                cout << "gak onok";
                 break;
 
             default:

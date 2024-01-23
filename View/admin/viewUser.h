@@ -19,7 +19,6 @@ void confirmUser(int &pilih)
         pilih = 9;
     }
 }
-
 void vAddUser(){
     string inpNamaUser, inpNikKtp, inpNoTelp, inpEmail, inpPassword;
     cout << "Masukan Nama anda :";
@@ -86,6 +85,7 @@ void vMenuAdminEditUser(){
     cout << "5. Kembali\n";
     cout << "Masukan pilihan anda : ";
     cin >> pilih;
+
     switch (pilih)
     {
     case 1:
@@ -114,7 +114,6 @@ void vMenuAdminEditUser(){
         }
 
     } while (pilih != 9);
-    
 }
    
 void vMenuBusUser(){
@@ -152,5 +151,47 @@ void vMenuBusUser(){
 
     } while (pilih != 9);
     
+}
+
+void vMenuAdmin(){
+ int pilih;
+    do
+    {
+        cout << "Menu User\n";
+        cout << "1. Tambah user\n";
+        cout << "2. Lihat user\n";
+        cout << "3. Cari user\n";
+        cout << "4. Delete User\n";
+        cout << "5. Kembali\n";
+        cout << "Masukan pilihan anda : ";
+        cin >> pilih;
+        switch (pilih)
+        {
+        case 1:
+            vAddUser();
+            break;
+        case 2:
+            vViewUser();
+            break;
+        case 3:
+            vSearchUser();
+            break;
+        case 4:
+            vDeleteUser();
+            break;
+        case 5:
+            pilih = 9;
+            break;
+        default:
+            pilih = 9;
+            break;
+        }
+
+        if (pilih != 9)
+        {
+            confirmUser(pilih);
+        }
+
+    } while (pilih != 9);
 }
    
