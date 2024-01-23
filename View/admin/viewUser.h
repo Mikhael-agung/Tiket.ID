@@ -72,6 +72,15 @@ void vDeleteUser(){
     }
 }
 
+void vInfoAkun(string inpNik)
+{
+    int indexInfo = mSearchUserTU(inpNik);
+    cout << "Nama : " << namaMember[indexInfo] << endl;
+    cout << "NIK KTP : " << nikKtp[indexInfo] << endl;
+    cout << "No Telepon : " << noTelp[indexInfo] << endl;
+    cout << "Email : " << email[indexInfo] << endl;
+    cout << "Saldo : " << saldoPoint[indexInfo] << endl;
+}
 
 void vMenuAdminEditUser(){
     int pilih;
