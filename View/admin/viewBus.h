@@ -62,6 +62,9 @@ void vDeleteBus(){
 
 void vMenuBus (){
     int pilih;
+    void vAddJadwalBus();
+    void vViewJadwal();
+    void vSearchJadwalBus();
     do
     {
         cout << "Menu Bus\n";
@@ -69,7 +72,10 @@ void vMenuBus (){
         cout << "2. Lihat daftar Bus\n";
         cout << "3. Cari Bus\n";
         cout << "4. Delete User (on going)\n";
-        cout << "5. Kembali\n";
+        cout << "5. Tambah Jadwal\n";
+        cout << "6. Lihat Jadwal\n";
+        cout << "7. Cari Jadwal\n";
+        cout << "8. Kembali\n";
         cout << "Masukan pilihan anda : ";
         cin >> pilih;
         switch (pilih)
@@ -92,7 +98,20 @@ void vMenuBus (){
         case 4:
             vDeleteBus();
         break;
+
         case 5: 
+            vAddJadwalBus();
+            break;
+
+        case 6: 
+            vViewJadwal();
+            break;
+
+        case 7: 
+            vSearchJadwalBus();
+            break;
+
+        case 8: 
             pilih = 7;
             break;
         default:

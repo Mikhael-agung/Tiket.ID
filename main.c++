@@ -1,19 +1,22 @@
 #include <iostream>
 #include <string>
 #include <limits>
-#include "view/user/viewTransaksi.h"
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
-// #include "model/modelKereta.h"
 #include "view/admin/viewJadwal.h"
+#include "view/user/viewTransaksi.h"
+#include "view/user/viewTopUpPoint.h"
+// #include "model/modelTopUp.h"
+// #include "model/modelTransaksi.h"
+//hahahhaa
 
 using namespace std;
 
 void static_value()
 {
-    //! testing AddMember
-    mAddUser("kurniawan", "0147258369", "0369258147", "kurniawan@gmail.com", "123456");
+    mAddUser("kurniawan", "12312312", "0369258147", "kurniawan@gmail.com", "123456");
     mAddUser("gracie", "321654987", "789456123", "gracie@gmail.com", "0123456");
+    //! testing AddMember
     // mAddUser("gracie", "321654987", "789456123", "gracie@gmail.com", "0123456");
 
     //* Testing Kendaraan Bus Static_Value
@@ -25,8 +28,10 @@ void static_value()
     // mAddTrain("Melati", "Eksekutif", "100");
 
     //*Testing jadwal
-    mAddjadwalBus("Patas", "18-4-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
-    mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "20000");
+    mAddjadwalBus("Sugeng rahayu", "18-6-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
+    mAddjadwalBus("Patas", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "150000");
+
+    //*Testing Transaksi
 }
 
 void confirm(int &pilih)
@@ -48,59 +53,82 @@ void confirm(int &pilih)
 void MenuAdmin()
 {
     int pilih;
+    void LoginAuthentication();
     do
     {
         cout << "Menu Admin\n";
         cout << "1. Menu Edit User\n";
         cout << "2. Menu Edit Bus\n";
-        cout << "5. Tambah jadwal Bus\n";
-        cout << "6. Lihat Jadwal Bus\n";
-        cout << "7. Exit\n";
+        cout << "3. Logout\n";
+        cout << "4. Exit\n";
         cout << "Masukan Pilihan : ";
         cin >> pilih;
         switch (pilih)
         {
         case 1:
-            vMenuUser();
+            vMenuAdminEditUser();
             break;
         case 2:
             vMenuBus();
             break;
         case 3:
-            vAddJadwalBus();
+            LoginAuthentication();
             break;
         case 4:
-            vViewJadwal();
-            break;
-        case 5:
-            break;
-        case 6:
-            break;
-        case 7:
-            break;
-        case 8:
+            pilih = 9;
             break;
         default:
             pilih = 9;
             break;
         }
 
-        if (pilih != 9)
-        {
-            confirm(pilih);
-        }
-
     } while (pilih != 7);
     cout << "THX\n";
 }
 
-void MenuUser()
+void MenuUser(string inpNik)
 {
-    int pilih;
+    int pilih, pilihan;
+    void LoginAuthentication();
     do
     {
+        cout << "1. Tiket Bus " << endl;
+        cout << "2. Tiket Kereta" << endl;
+        cout << "3. Tiket Pesawat" << endl;
+        cout << "4. Isi Saldo Point" << endl;
+        cout << "5. Pengaturan Profil" << endl;
+        cout << "Silakan pilih Menu : ";
+        cin >> pilih;
+        switch (pilih)
+        {
+        case 1:
+            vMenuBusUser();
+            break;
 
+        case 4:
+            // mtopUpAkun();
+            vTopUpPoint(inpNik);
+            break;
+
+        case 5:
+            cout << "1. Info Profile" << endl;
+            cout << "2. Ganti Password" << endl;
+            cout << "3. History" << endl;
+            cout << "Masukkan Pilihan anda";
+            cin >> pilihan;
+            switch (pilihan)
+            {
+            case 1:
+                vInfoAkun(inpNik);
+                cout << "gak onok";
+                break;
+
+            default:
+                break;
+            }
+        }
     } while (pilih != 0);
+    cout << "Terima Kasih";
 }
 
 void LoginAuthentication()
@@ -119,7 +147,7 @@ void LoginAuthentication()
     }
     else if (index != -1)
     {
-        MenuUser();
+        MenuUser(nikKtp[index]);
     }
     else
     {
@@ -141,9 +169,13 @@ void LoginAuthentication()
 int main()
 {
     static_value();
-
+    // mSearchJdwlBus("Patas", "Surabaya", "Jember");
+    // mViewjadwalBus();
+    mTransaksiBus("Patas", "Surabaya", "Jember");
     // mViewTrain();
     LoginAuthentication();
+    // vTransaksiBus();
     // mSearchJadwalBus();
+    // vSearchJadwalBus();
     return 0;
 }

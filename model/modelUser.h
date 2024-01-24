@@ -21,6 +21,7 @@ void mAddUser(string inpNamaUser, string inpNikKtp, string inpNoTelp, string inp
     password[nMember] = inpPassword;
     email[nMember] = inpEmail;
     nikKtp[nMember] = inpNikKtp;
+    saldoPoint[nMember] = 0;
     nMember++;
 }
 
@@ -41,15 +42,17 @@ void mViewUser()
     cout << "Data Para Member\n";
     cout << "Jumlah member : " << nMember << endl;
     cout << "================================================================================================================" << endl;
-    cout << setw(10) << "No. urut" << setw(13) << "No .ID"
-         << "Nama" << setw(17) << "No Nik Ktp" << setw(14) << "No. Telp" << setw(20) << "Email" << setw(20) << "Password" << endl;
+    cout << setw(10) << "No. urut" << setw(13) << "No .ID" << setw(10)
+         << "Nama" << setw(17) << "No Nik Ktp" << setw(14) << "No. Telp" << setw(20) << "Email" << setw(20) << "Password" << setw(15) << "Point" << endl;
     cout << "================================================================================================================" << endl;
     for (int i = 0; i < nMember; i++)
     {
-        cout << setw(7) << i + 1 << setw(18) << userID[i] << namaMember[i] << setw(15) << nikKtp[i] << setw(15) << noTelp[i] << setw(25) << email[i] << setw(15) << password[i] << endl;
+        cout << setw(7) << i + 1 << setw(15) << userID[i] << setw(12) << namaMember[i] << setw(15) << nikKtp[i] << setw(15) << noTelp[i] << setw(25) << email[i] << setw(15) << password[i] << setw(15) << saldoPoint[i] << endl;
     }
     cout << "================================================================================================================" << endl;
 }
+
+// Search User By No.Telpon
 
 int mSearchUser(string inpNoTelp)
 {
@@ -63,13 +66,37 @@ int mSearchUser(string inpNoTelp)
     return -1;
 }
 
+// Fungsi pencarian user berdasarkan NIK atau nomor telepon
+int mSearchUserNik(string inpNikOrNoTelp)
+{
+    for (int i = 0; i < nMember; ++i)
+    {
+        if (nikKtp[i] == inpNikOrNoTelp || noTelp[i] == inpNikOrNoTelp)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int mSearchUserTU(string inpNoNIK)
+{
+    for (int i = 0; i < nMember; i++)
+    {
+        if (nikKtp[i] == inpNoNIK)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
 int mDeleteUser(string inpNamaUser, string inpNik)
 {
     for (int i = 0; i < nMember; i++)
     {
         if (namaMember[i] == inpNamaUser && nikKtp[i] == inpNik)
         {
-            for(int j = i; j < nMember - 1; j++)
+            for (int j = i; j < nMember - 1; j++)
             {
                 userID[j] = userID[j + 1];
                 namaMember[j] = namaMember[j + 1];
@@ -100,4 +127,3 @@ void mUpdatePassword(string inpNoTelp, string inpPass)
         cout << "Password Gagal untuk di rubah";
     }
 }
-
