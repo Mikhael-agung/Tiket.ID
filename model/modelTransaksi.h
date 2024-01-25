@@ -4,7 +4,6 @@
 
 using namespace std;
 
-<<<<<<< HEAD
 // Fungsi pencarian user berdasarkan NIK atau nomor telepon
 int mSearchUserNik(string inpNikOrNoTelp)
 {
@@ -18,8 +17,6 @@ int mSearchUserNik(string inpNikOrNoTelp)
     return -1;
 }
 
-=======
->>>>>>> 06f8ccf321fb788a8db691115aeb0635befb52f2
 // Fungsi pembayaran Virtual Account
 void mVirtualAccount(int totalHarga[])
 {

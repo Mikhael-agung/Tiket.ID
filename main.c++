@@ -1,18 +1,11 @@
 #include <iostream>
 #include <string>
 #include <limits>
-<<<<<<< HEAD
 #include "view/user/viewTransaksi.h"
-=======
->>>>>>> 06f8ccf321fb788a8db691115aeb0635befb52f2
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
 #include "view/admin/viewJadwal.h"
-<<<<<<< HEAD
 //#include "view/user/viewTransaksi.h"
-=======
-#include "view/user/viewTransaksi.h"
->>>>>>> 06f8ccf321fb788a8db691115aeb0635befb52f2
 #include "view/user/viewTopUpPoint.h"
 // #include "model/modelTopUp.h"
 // #include "model/modelTransaksi.h"
