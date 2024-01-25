@@ -82,6 +82,11 @@ void vInfoAkun(string inpNik)
     cout << "Saldo : " << saldoPoint[indexInfo] << endl;
 }
 
+// void vHistoryAkun(string inpNik){
+    
+//     cout << ""
+// }
+
 void vMenuAdminEditUser(){
     int pilih;
     do

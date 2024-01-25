@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 // Fungsi pembayaran Virtual Account
 void mVirtualAccount(int totalHarga[])
 {
@@ -35,9 +34,10 @@ void mVirtualAccount(int totalHarga[])
 // Fungsi pembayaran
 void metodePembayaran(int hargaTotal, string inpNik)
 {
+    string inpPassword;
     int totalHarga = 0;
     int pilih;
-
+    int salah = 0;
     do
     {
         cout << "1. Virtual Account\n";
@@ -63,8 +63,40 @@ void metodePembayaran(int hargaTotal, string inpNik)
         case 3:
             int indexPoint;
             indexPoint = mSearchUserTU(inpNik);
-            if(indexPoint ){
-
+            if (indexPoint != -1)
+            {
+                if (saldoPoint[indexPoint] >= hargaTotal)
+                {
+                    while (salah < 3)
+                    {
+                        cout << "Konfirmasi Masukkan Password anda";
+                        cin >> inpPassword;
+                        if (inpPassword == password[indexPoint])
+                        {
+                            saldoPoint[indexPoint] = saldoPoint[indexPoint] - hargaTotal;
+                            cout << "PEMBAYARAN BERHASIL" << endl;
+                            salah = 3;
+                            pilih = 0;
+                        }
+                        else
+                        {
+                            salah++;
+                            if (salah == 3)
+                            {
+                                cout << "AKUN TERBLOKIR TOLONG HUBUNGI CS" << endl;
+                                pilih = 0;
+                            }
+                            else
+                            {
+                                cout << "ANDA SUDAH MEMASUKKAN PASSWORD SEBANYAK " << salah << "\n AKUN AKAN TERBLOKIR JIKA SALAH MEMASUKKAN PASSWORD 3x" << endl;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    cout << "Saldo Anda Tidak Cukup" << endl;
+                }
             }
             break;
         default:

@@ -9,6 +9,7 @@ void mtopUpAkun(string inpNikKtp)
     int salah = 0;
     string inpPassword;
     int inpSaldoAkun;
+    // int indexTiket = 
     int indexTUakun = mSearchUserTU(inpNikKtp);
     if (indexTUakun != 1)
     {
