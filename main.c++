@@ -1,16 +1,15 @@
 #include <iostream>
 #include <string>
 #include <limits>
-// #include "view/user/viewTransaksi.h"
+#include "view/user/viewTransaksi.h"
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
 // #include "model/modelKereta.h"
 #include "view/admin/viewJadwal.h"
-// #include "view/user/viewTransaksi.h"
+//#include "view/user/viewTransaksi.h"
 #include "view/user/viewTopUpPoint.h"
 // #include "model/modelTopUp.h"
 // #include "model/modelTransaksi.h"
-//hahahhaa
 
 using namespace std;
 
@@ -158,7 +157,7 @@ int main()
     // mTransaksiBus("Patas", "Surabaya", "Jember");
     // mViewTrain();
     LoginAuthentication();
-    // vTransaksiBus();
+    //vTransaksiBus();
     // mSearchJadwalBus();
     // vSearchJadwalBus();
     return 0;

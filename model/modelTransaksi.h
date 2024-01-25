@@ -4,10 +4,6 @@
 
 using namespace std;
 
-void mTransaksiBus(string inpNamaBis, string inpStartKeberangkatan, string inpTujuanKeberangkatan)
-{
-}
-
 // Fungsi pencarian user berdasarkan NIK atau nomor telepon
 int mSearchUserNik(string inpNikOrNoTelp)
 {
