@@ -19,7 +19,6 @@ void confirmUser(int &pilih)
         pilih = 9;
     }
 }
-
 void vAddUser(){
     string inpNamaUser, inpNikKtp, inpNoTelp, inpEmail, inpPassword;
     cout << "Masukan Nama anda :";
@@ -73,84 +72,139 @@ void vDeleteUser(){
     }
 }
 
+void vInfoAkun(string inpNik)
+{
+    int indexInfo = mSearchUserTU(inpNik);
+    cout << "Nama : " << namaMember[indexInfo] << endl;
+    cout << "NIK KTP : " << nikKtp[indexInfo] << endl;
+    cout << "No Telepon : " << noTelp[indexInfo] << endl;
+    cout << "Email : " << email[indexInfo] << endl;
+    cout << "Saldo : " << saldoPoint[indexInfo] << endl;
+}
+
+// void vHistoryAkun(string inpNik){
+    
+//     cout << ""
+// }
+
+void vMenuAdminEditUser(){
+    int pilih;
+    do
+    {
+        cout << "Menu User\n";
+        cout << "1. Tambah user\n";
+        cout << "2. Lihat user\n";
+        cout << "3. Cari user\n";
+        cout << "4. Delete User\n";
+        cout << "5. Kembali\n";
+        cout << "Masukan pilihan anda : ";
+        cin >> pilih;
+        switch (pilih)
+        {
+        case 1:
+            vAddUser();
+            break;
+        case 2:
+            vViewUser();
+            break;
+        case 3:
+            vSearchUser();
+            break;
+        case 4:
+            vDeleteUser();
+            break;
+        case 5:
+            pilih = 9;
+            break;
+        default:
+            pilih = 9;
+            break;
+        }
+
+        if (pilih != 9)
+        {
+            confirmUser(pilih);
+        }
+
+    } while (pilih != 9);
+}
 
 void vMenuAdmin(){
     int pilih;
     do
     {
-    cout << "Menu User\n";
-    cout << "1. Tambah user\n";
-    cout << "2. Lihat user\n";
-    cout << "3. Cari user\n";
-    cout << "4. Delete User\n";
-    cout << "5. Kembali\n";
-    cout << "Masukan pilihan anda : ";
-    cin >> pilih;
-    switch (pilih)
-    {
-    case 1:
-        vAddUser();
-        break;
-    case 2: 
-        vViewUser();
-        break;
-    case 3: 
-        vSearchUser();
-        break;
-    case 4:
-        vDeleteUser();
-        break;
-    case 5:
-        pilih = 9;
-        break;
-    default:
-        pilih = 9;
-        break;
-    }
+        cout << "Menu User\n";
+        cout << "1. Tambah user\n";
+        cout << "2. Lihat user\n";
+        cout << "3. Cari user\n";
+        cout << "4. Delete User\n";
+        cout << "5. Kembali\n";
+        cout << "Masukan pilihan anda : ";
+        cin >> pilih;
+        switch (pilih)
+        {
+        case 1:
+            vAddUser();
+            break;
+        case 2:
+            vViewUser();
+            break;
+        case 3:
+            vSearchUser();
+            break;
+        case 4:
+            vDeleteUser();
+            break;
+        case 5:
+            pilih = 9;
+            break;
+        default:
+            pilih = 9;
+            break;
+        }
 
-    if (pilih != 9)
+        if (pilih != 9)
         {
             confirmUser(pilih);
         }
 
     } while (pilih != 9);
-    
 }
+
    
-void vMenuBusUser(){
+void vMenuBusUser()
+{
     int pilih;
     void mViewjadwalBus();
     void vTransaksiBus();
     do
     {
-    cout << "Menu User\n";
-    cout << "1. Lihat Jadwal\n";
-    cout << "2. Cari Tiket\n";
-    cout << "3. Kembali\n";
-    cout << "Masukan pilihan anda : ";
-    cin >> pilih;
-    switch (pilih)
-    {
-    case 1:
-        mViewjadwalBus();
-        break;
-    case 2: 
-        vTransaksiBus();
-        break;
-    case 3:
-        pilih = 9;
-        break;
-    default:
-        pilih = 9;
-        break;
-    }
-
-    if (pilih != 9)
+        
+        cout << "Menu User\n";
+        cout << "1. Lihat Jadwal\n";
+        cout << "2. Cari Tiket\n";
+        cout << "3. Kembali\n";
+        cout << "Masukan pilihan anda : ";
+        cin >> pilih;
+        switch (pilih)
+        {
+        case 1:
+            mViewjadwalBus();
+            break;
+        case 2:
+            vTransaksiBus();
+            break;
+        case 3:
+            pilih = 9;
+            break;
+        default:
+            pilih = 9;
+            break;
+        }
+        if (pilih != 9)
         {
             confirmUser(pilih);
         }
 
     } while (pilih != 9);
-    
 }
-   

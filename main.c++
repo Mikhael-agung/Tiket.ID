@@ -1,12 +1,18 @@
 #include <iostream>
 #include <string>
 #include <limits>
+<<<<<<< HEAD
 #include "view/user/viewTransaksi.h"
+=======
+>>>>>>> 06f8ccf321fb788a8db691115aeb0635befb52f2
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
-// #include "model/modelKereta.h"
 #include "view/admin/viewJadwal.h"
+<<<<<<< HEAD
 //#include "view/user/viewTransaksi.h"
+=======
+#include "view/user/viewTransaksi.h"
+>>>>>>> 06f8ccf321fb788a8db691115aeb0635befb52f2
 #include "view/user/viewTopUpPoint.h"
 // #include "model/modelTopUp.h"
 // #include "model/modelTransaksi.h"
@@ -15,9 +21,9 @@ using namespace std;
 
 void static_value()
 {
-    //! testing AddMember
-    mAddUser("kurniawan", "0147258369", "0369258147", "kurniawan@gmail.com", "123456");
+    mAddUser("kurniawan", "12312312", "0369258147", "kurniawan@gmail.com", "123456");
     mAddUser("gracie", "321654987", "789456123", "gracie@gmail.com", "0123456");
+    //! testing AddMember
     // mAddUser("gracie", "321654987", "789456123", "gracie@gmail.com", "0123456");
 
     //* Testing Kendaraan Bus Static_Value
@@ -29,8 +35,8 @@ void static_value()
     // mAddTrain("Melati", "Eksekutif", "100");
 
     //*Testing jadwal
-    mAddjadwalBus("Patas", "18-6-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
-    mAddjadwalBus("Sugeng rahayu", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "150000");
+    mAddjadwalBus("Sugeng rahayu", "18-6-2024", "Surabaya", "Jember", "18.00", "15.00", "20000");
+    mAddjadwalBus("Patas", "18-4-2024", "Jakarta", "Semarang", "18.00", "15.00", "150000");
 
     //*Testing Transaksi
 }
@@ -67,7 +73,7 @@ void MenuAdmin()
         switch (pilih)
         {
         case 1:
-            vMenuAdmin();
+            vMenuAdminEditUser();
             break;
         case 2:
             vMenuBus();
@@ -89,13 +95,16 @@ void MenuAdmin()
 
 void MenuUser(string inpNik)
 {
-    int pilih;
+    int pilih, pilihan;
+    void LoginAuthentication();
     do
     {
         cout << "1. Tiket Bus " << endl;
         cout << "2. Tiket Kereta" << endl;
         cout << "3. Tiket Pesawat" << endl;
-        cout << "Silakan pilih angkutan";
+        cout << "4. Isi Saldo Point" << endl;
+        cout << "5. Pengaturan Profil" << endl;
+        cout << "Silakan pilih Menu : ";
         cin >> pilih;
         switch (pilih)
         {
@@ -103,12 +112,30 @@ void MenuUser(string inpNik)
             vMenuBusUser();
             break;
 
-        case 2:
+        case 4:
             // mtopUpAkun();
             vTopUpPoint(inpNik);
             break;
-        default:
-            break;
+
+        case 5:
+            cout << "1. Info Profile" << endl;
+            cout << "2. Ganti Password" << endl;
+            cout << "3. History" << endl;
+            cout << "Masukkan Pilihan anda";
+            cin >> pilihan;
+            switch (pilihan)
+            {
+            case 1:
+                vInfoAkun(inpNik);
+                break;
+
+            case 3:
+                
+                break;
+
+            default:
+                break;
+            }
         }
     } while (pilih != 0);
     cout << "Terima Kasih";
@@ -154,7 +181,7 @@ int main()
     static_value();
     // mSearchJdwlBus("Patas", "Surabaya", "Jember");
     // mViewjadwalBus();
-    // mTransaksiBus("Patas", "Surabaya", "Jember");
+    mTransaksiBus("Patas", "Surabaya", "Jember");
     // mViewTrain();
     LoginAuthentication();
     //vTransaksiBus();

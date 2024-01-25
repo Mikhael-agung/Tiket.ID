@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+// #include "modelUser.h"
 
 using namespace std;
 
@@ -8,10 +9,11 @@ void mtopUpAkun(string inpNikKtp)
     int salah = 0;
     string inpPassword;
     int inpSaldoAkun;
+    // int indexTiket = 
     int indexTUakun = mSearchUserTU(inpNikKtp);
-    if (indexTUakun)
+    if (indexTUakun != 1)
     {
-        cout << "TU SALDO AKUN" << endl;
+        cout << "TOP UP SALDO AKUN" << endl;
         cout << "Isi Saldo Akun : ";
         cin >> inpSaldoAkun;
         while (salah < 3)
@@ -21,6 +23,7 @@ void mtopUpAkun(string inpNikKtp)
             if (inpPassword == password[indexTUakun])
             {
                 saldoPoint[indexTUakun] = inpSaldoAkun + saldoPoint[indexTUakun];
+                salah = 3;
             }
             else
             {
@@ -35,5 +38,6 @@ void mtopUpAkun(string inpNikKtp)
                 }
             }
         }
+        cout << "Pembayaran berhasil" << endl;
     }
 }
