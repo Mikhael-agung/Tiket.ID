@@ -15,7 +15,7 @@ string GenerateID()
     return to_string(IdRandom);
 }
 
-void mAddBus(string inpNamaBus, string inpJumlahKursi)
+void mAddBus(string inpNamaBus, int inpJumlahKursi)
 {
     idBus[nBus] = GenerateID();
     namaBus[nBus] = inpNamaBus;

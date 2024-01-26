@@ -16,8 +16,8 @@ void vAddTiket(string inpNikTiket)
     cin >> inpJumlahTIKET;
     int indexJadwal = 1;
     indexJadwal = mSearchJadwalForBus(inpNamaBus);
-    for (jumlahKursi[indexJadwal];  <= inpJumlahTIKET; i++)
+    for (int i = jumlahKursi[indexJadwal];  i <= inpJumlahTIKET; i++)
     {
-        cout << "Kuris Duduk Anda"
+        cout << "Kuris Duduk Anda";
     }
 }

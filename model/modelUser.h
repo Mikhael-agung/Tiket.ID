@@ -67,17 +67,17 @@ int mSearchUser(string inpNoTelp)
 }
 
 // Fungsi pencarian user berdasarkan NIK atau nomor telepon
-int mSearchUserNik(string inpNikOrNoTelp)
-{
-    for (int i = 0; i < nMember; ++i)
+    int mSearchUserNik(string inpNikOrNoTelp)
     {
-        if (nikKtp[i] == inpNikOrNoTelp || noTelp[i] == inpNikOrNoTelp)
+        for (int i = 0; i < nMember; ++i)
         {
-            return i;
+            if (nikKtp[i] == inpNikOrNoTelp || noTelp[i] == inpNikOrNoTelp)
+            {
+                return i;
+            }
         }
+        return -1;
     }
-    return -1;
-}
 
 int mSearchUserTU(string inpNoNIK)
 {
@@ -90,6 +90,7 @@ int mSearchUserTU(string inpNoNIK)
     }
     return -1;
 }
+
 int mDeleteUser(string inpNamaUser, string inpNik)
 {
     for (int i = 0; i < nMember; i++)

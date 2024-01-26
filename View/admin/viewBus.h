@@ -22,13 +22,14 @@ void confirmBus(int &pilih){
 }
  
 void vAddBus() {
-    string inpNamaBus, inpJumlahKursi, idBus;
+    string inpNamaBus, idBus;
+    int inpJumlahKursi;
     idBus = GenerateID();
     cin.ignore();
     cout << "Masukan Nama Bus : ";
     getline(cin, inpNamaBus);
     cout << "Masukan Jumlah Kursi : ";
-    getline(cin, inpJumlahKursi);
+    cin >> inpJumlahKursi;
     mAddBus(inpNamaBus, inpJumlahKursi);
 }
 

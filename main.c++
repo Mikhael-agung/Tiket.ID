@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
-#include <limits>
-#include "view/user/viewTransaksi.h"
 #include "view/admin/viewBus.h"
 #include "view/admin/viewUser.h"
 #include "view/admin/viewJadwal.h"
-//#include "view/user/viewTransaksi.h"
+#include "view/admin/viewTiket.h"
+#include <limits>
+#include "view/user/viewTransaksi.h"
 #include "view/user/viewTopUpPoint.h"
 // #include "model/modelTopUp.h"
 // #include "model/modelTransaksi.h"
@@ -20,8 +20,8 @@ void static_value()
     // mAddUser("gracie", "321654987", "789456123", "gracie@gmail.com", "0123456");
 
     //* Testing Kendaraan Bus Static_Value
-    mAddBus("Sugeng rahayu", "50");
-    mAddBus("Patas", "50");
+    mAddBus("Sugeng rahayu", 50);
+    mAddBus("Patas", 50);
 
     // //* Testing Fitur Kereta dan Gerbong
     // mAddTrain("Agro bromo", "Ekonomi ekslusif", "200");
@@ -172,13 +172,6 @@ void LoginAuthentication()
 int main()
 {
     static_value();
-    // mSearchJdwlBus("Patas", "Surabaya", "Jember");
-    // mViewjadwalBus();
-    mTransaksiBus("Patas", "Surabaya", "Jember");
-    // mViewTrain();
     LoginAuthentication();
-    //vTransaksiBus();
-    // mSearchJadwalBus();
-    // vSearchJadwalBus();
     return 0;
 }
