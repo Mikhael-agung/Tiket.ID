@@ -1,25 +1,10 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+// #include "modelUser.h"
 
 using namespace std;
 
-<<<<<<< HEAD
-// Fungsi pencarian user berdasarkan NIK atau nomor telepon
-int mSearchUserNik(string inpNikOrNoTelp)
-{
-    for (int i = 0; i < nMember; ++i)
-    {
-        if (nikKtp[i] == inpNikOrNoTelp || noTelp[i] == inpNikOrNoTelp)
-        {
-            return i;
-        }
-    }
-    return -1;
-}
-
-=======
->>>>>>> 06f8ccf321fb788a8db691115aeb0635befb52f2
 // Fungsi pembayaran Virtual Account
 void mVirtualAccount(int totalHarga[])
 {
@@ -53,13 +38,13 @@ void metodePembayaran(int hargaTotal, string inpNik)
     string inpPassword;
     int totalHarga = 0;
     int pilih;
-    int salah = 0;
+    char konfirmasi;
     do
     {
         cout << "1. Virtual Account\n";
         cout << "2. Melalui ATM\n";
         cout << "3. Menggunakan Point\n";
-        cout << "4. Batal\n";
+        cout << "4. Exit\n";
 
         cout << "Silakan Pilih metode pembayaran : ";
         cin >> pilih;
@@ -83,7 +68,7 @@ void metodePembayaran(int hargaTotal, string inpNik)
             {
                 if (saldoPoint[indexPoint] >= hargaTotal)
                 {
-                    while (salah < 3)
+                    do
                     {
                         cout << "Konfirmasi Masukkan Password anda";
                         cin >> inpPassword;
@@ -91,23 +76,20 @@ void metodePembayaran(int hargaTotal, string inpNik)
                         {
                             saldoPoint[indexPoint] = saldoPoint[indexPoint] - hargaTotal;
                             cout << "PEMBAYARAN BERHASIL" << endl;
-                            salah = 3;
+                            konfirmasi = 'n';
                             pilih = 0;
                         }
                         else
                         {
-                            salah++;
-                            if (salah == 3)
+                            cout << "Password Salah !";
+                            cout << "Apakah anda ingin menginputkan password kembali (ketik y/n)";
+                            cin >> konfirmasi;
+                            if (konfirmasi != 'y' || konfirmasi != 'Y')
                             {
-                                cout << "AKUN TERBLOKIR TOLONG HUBUNGI CS" << endl;
-                                pilih = 0;
-                            }
-                            else
-                            {
-                                cout << "ANDA SUDAH MEMASUKKAN PASSWORD SEBANYAK " << salah << "\n AKUN AKAN TERBLOKIR JIKA SALAH MEMASUKKAN PASSWORD 3x" << endl;
+                                cout << "ANDA BELUM MEBAYAR " << endl;
                             }
                         }
-                    }
+                    } while (konfirmasi == 'y' || konfirmasi == 'Y');
                 }
                 else
                 {
@@ -116,7 +98,7 @@ void metodePembayaran(int hargaTotal, string inpNik)
             }
             break;
         default:
-            cout << "Pilihan tidak valid. Silakan coba lagi.\n";
+            pilih = 0;
             break;
         }
     } while (pilih != 0);

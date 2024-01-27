@@ -25,7 +25,7 @@ void addUserTIKET(string inpNikTIKET, string inpNamaBUS, string inpTempatKeberan
 
 int mSearchTIKET(string inpNikTIKET)
 {
-    int index = 1;
+    int index = -1;
 
     for (int i = 0; i < nTiket; i++)
     {
@@ -35,9 +35,19 @@ int mSearchTIKET(string inpNikTIKET)
             break;
         }
     }
-    if (index == 1)
+    if (index == -1)
     {
         cout << "ANDA BELUM MEMBELI TIKET" << endl;
     }
     return index;
+}
+
+void mViewTiket(string inpNIk)
+{
+    int indexTiket;
+    indexTiket = mSearchTIKET(inpNIk);
+    if (indexTiket != -1)
+    {
+        
+    }
 }

@@ -19,7 +19,8 @@ void confirmUser(int &pilih)
         pilih = 9;
     }
 }
-void vAddUser(){
+void vAddUser()
+{
     string inpNamaUser, inpNikKtp, inpNoTelp, inpEmail, inpPassword;
     cout << "Masukan Nama anda :";
     cin >> inpNamaUser;
@@ -35,11 +36,13 @@ void vAddUser(){
     cout << endl;
 }
 
-void vViewUser(){
+void vViewUser()
+{
     mViewUser();
 }
 
-void vSearchUser(){
+void vSearchUser()
+{
     string inpNoTelp;
     cout << "Masukan No Telepon : ";
     cin >> inpNoTelp;
@@ -47,17 +50,21 @@ void vSearchUser(){
     cout << "Data Para Member\n";
     cout << "Jumlah member : " << index << endl;
     cout << "================================================================================================================" << endl;
-    cout << setw(13) << "No. urut "<< setw(11) << "Nama" << setw(17) << "No Nik Ktp" << setw(14) << "No. Telp" << setw(20) << "Email" << setw(20) << "Password" << endl;
+    cout << setw(13) << "No. urut " << setw(11) << "Nama" << setw(17) << "No Nik Ktp" << setw(14) << "No. Telp" << setw(20) << "Email" << setw(20) << "Password" << endl;
     cout << "================================================================================================================" << endl;
-    if (index != -1){
-        cout << setw(8) << index+1 <<setw(18) << namaMember[index] << setw(15) << nikKtp[index] << setw(15) << noTelp[index] << setw(25) << email[index] << setw(15) << password[index] << endl;
-    }else{
+    if (index != -1)
+    {
+        cout << setw(8) << index + 1 << setw(18) << namaMember[index] << setw(15) << nikKtp[index] << setw(15) << noTelp[index] << setw(25) << email[index] << setw(15) << password[index] << endl;
+    }
+    else
+    {
         cout << "No.Telp yang anda cari tidak ada";
     }
     cout << "================================================================================================================" << endl;
 }
 
-void vDeleteUser(){
+void vDeleteUser()
+{
     string inpNamaUser, inpNikKtp;
     cout << "Masukan Nama user : ";
     cin >> inpNamaUser;
@@ -65,9 +72,12 @@ void vDeleteUser(){
     cin >> inpNikKtp;
 
     int index = mDeleteUser(inpNamaUser, inpNikKtp);
-    if(index != -1){
+    if (index != -1)
+    {
         cout << "Data user berhasil dihapus!!\n";
-    }else{
+    }
+    else
+    {
         cout << "Data user tidak ditemukan \n";
     }
 }
@@ -83,11 +93,51 @@ void vInfoAkun(string inpNik)
 }
 
 // void vHistoryAkun(string inpNik){
-    
+
 //     cout << ""
 // }
 
-void vMenuAdminEditUser(){
+void vMenuAdminEditUser()
+{
+    int pilih;
+    do
+    {
+        cout << "Menu User\n";
+        cout << "1. Tambah user\n";
+        cout << "2. Lihat user\n";
+        cout << "3. Cari user\n";
+        cout << "4. Kembali\n";
+        cout << "Masukan pilihan anda : ";
+        cin >> pilih;
+        switch (pilih)
+        {
+        case 1:
+            vAddUser();
+            break;
+        case 2:
+            vViewUser();
+            break;
+        case 3:
+            vSearchUser();
+            break;
+        case 4:
+            pilih = 9;
+            break;
+        default:
+            pilih = 9;
+            break;
+        }
+
+        if (pilih != 9)
+        {
+            confirmUser(pilih);
+        }
+
+    } while (pilih != 9);
+}
+
+void vMenuAdmin()
+{
     int pilih;
     do
     {
@@ -129,49 +179,6 @@ void vMenuAdminEditUser(){
     } while (pilih != 9);
 }
 
-void vMenuAdmin(){
-    int pilih;
-    do
-    {
-        cout << "Menu User\n";
-        cout << "1. Tambah user\n";
-        cout << "2. Lihat user\n";
-        cout << "3. Cari user\n";
-        cout << "4. Delete User\n";
-        cout << "5. Kembali\n";
-        cout << "Masukan pilihan anda : ";
-        cin >> pilih;
-        switch (pilih)
-        {
-        case 1:
-            vAddUser();
-            break;
-        case 2:
-            vViewUser();
-            break;
-        case 3:
-            vSearchUser();
-            break;
-        case 4:
-            vDeleteUser();
-            break;
-        case 5:
-            pilih = 9;
-            break;
-        default:
-            pilih = 9;
-            break;
-        }
-
-        if (pilih != 9)
-        {
-            confirmUser(pilih);
-        }
-
-    } while (pilih != 9);
-}
-
-   
 void vMenuBusUser()
 {
     int pilih;
@@ -179,7 +186,7 @@ void vMenuBusUser()
     void vTransaksiBus();
     do
     {
-        
+
         cout << "Menu User\n";
         cout << "1. Lihat Jadwal\n";
         cout << "2. Cari Tiket\n";

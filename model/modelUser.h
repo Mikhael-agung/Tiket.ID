@@ -90,6 +90,7 @@ int mSearchUserTU(string inpNoNIK)
     }
     return -1;
 }
+
 int mDeleteUser(string inpNamaUser, string inpNik)
 {
     for (int i = 0; i < nMember; i++)

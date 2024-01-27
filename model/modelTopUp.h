@@ -6,38 +6,38 @@ using namespace std;
 
 void mtopUpAkun(string inpNikKtp)
 {
-    int salah = 0;
+    char konfirmasi;
     string inpPassword;
     int inpSaldoAkun;
-    // int indexTiket = 
+    // int indexTiket =
     int indexTUakun = mSearchUserTU(inpNikKtp);
     if (indexTUakun != 1)
     {
         cout << "TOP UP SALDO AKUN" << endl;
         cout << "Isi Saldo Akun : ";
         cin >> inpSaldoAkun;
-        while (salah < 3)
+        do
         {
             cout << "Konfirmasi Masukkan Password anda";
             cin >> inpPassword;
-            if (inpPassword == password[indexTUakun])
             {
-                saldoPoint[indexTUakun] = inpSaldoAkun + saldoPoint[indexTUakun];
-                salah = 3;
-            }
-            else
-            {
-                salah++;
-                if (salah == 3)
+                if (inpPassword == password[indexTUakun])
                 {
-                    cout << "AKUN TERBLOKIR TOLONG HUBUNGI CS" << endl;
+                    saldoPoint[indexTUakun] = inpSaldoAkun + saldoPoint[indexTUakun];
+                    cout << "Pembayaran berhasil" << endl;
+                    konfirmasi = 'n';
                 }
                 else
                 {
-                    cout << "ANDA SUDAH MEMASUKKAN PASSWORD SEBANYAK " << salah << "\n AKUN AKAN TERBLOKIR JIKA SALAH MEMASUKKAN PASSWORD 3x" << endl;
+                    cout << "Password Salah !";
+                    cout << "Apakah anda ingin menginputkan password kembali (ketik y/n)";
+                    cin >> konfirmasi;
+                    if (konfirmasi != 'y' || konfirmasi != 'Y')
+                    {
+                        cout << "ANDA BELUM MEBAYAR " << endl;
+                    }
                 }
             }
-        }
-        cout << "Pembayaran berhasil" << endl;
+        } while (konfirmasi == 'y' || konfirmasi == 'Y');       
     }
 }
