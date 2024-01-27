@@ -117,7 +117,6 @@ int mSearchJdwlBus(string inpNamaBus, string inpAwalKeberangkatan, string inpTuj
 //     cout << endl;
 // }
 
-
 // int mSearchJadwalPesawat(string inpNamaPesawat, string inpAwalKeberangkatan, string inpTujuanKeberangkatan){    int index = -1;
 //     // int indexPesawat = mSearchJadwalPesawat(inpNamaPesawat);
 //     for(int i = 0; i < nPesawat; i++){
